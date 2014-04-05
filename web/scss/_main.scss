@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   各種（モジュール）
+   ========================================================================== */
+/**
+ * グローバルナビゲーション
+ * .l-gnav
+ */
+.l-gnav {
+	ul {
+		margin: 0;
+	}
+}
+.gnav {
+	margin: 0;
+	font-weight: bold;
+	a {
+		display: block;
+		padding: 6px 18px 6px 10px;
+		border-top: 4px $bgcolor01 solid;
+		&:link {
+			color: #000;
+		}
+		&:visited {
+			color: #000;
+		}
+		&:hover {
+			color: $color03;
+		}
+		&:active {
+			color: $color03;
+		}
+	}
+	li {
+		float: left;
+		margin: 0 0 0 20px;
+	}
+	.gnav-low { // li
+		position: relative;
+		a {
+			background-image: url(../img/item-icon10.png);
+			background-repeat: no-repeat;
+			background-position: 94% .9em;
+		}
+		ul {
+			position: absolute;
+			top: 100%;
+			z-index: 10;
+			li {
+				float: none;
+				background-color: #fff;
+				margin: 0;
+				padding: 0 4px;
+				white-space: nowrap;
+				a {
+					background-image: none;
+					padding: 10px 6px;
+					border: none;
+					border-bottom: 1px #e7e7e7 solid;
+				}
+				&:last-child {
+					border-bottom: 4px #2aacc8 solid;
+					a {
+						border: none;
+					}
+				}
+			}
+		}
+	}
+	.sfHover {
+		background-color: #fff;
+		a {
+			border-top: 4px #2aacc8 solid;
+		}
+	}
+}
+/**
+ * メインビジュアル
+ * .l-mainvisual
+ */
+.l-mainvisual {
+	padding: 20px 0 10px;
+}
+/**
+ * サービス
+ * .l-availabe
+ */
+.l-available {
+	padding: 40px 0 30px;
+}
+.available-item {
+	float: left;
+	width: 230px;
+	padding: 0 26px 0 0;
+	.available-item-title {
+		background-repeat: no-repeat;
+		background-position: left center;
+		height: 3em;
+		padding: 22px 0 0 50px;
+		font-size: r-size(15,14);
+	}
+	.available-item-more {
+		background-image: url(../img/item-icon11.png);
+		background-repeat: no-repeat;
+		background-position: left center;
+		padding: 0 0 0 14px;
+	}
+}
+.available-item-v4 {
+	padding: 0;
+}
+.available-item-title {
+	.available-item-v1 & {
+		background-image: url(../img/item-icon01.png);
+	}
+	.available-item-v2 & {
+		background-image: url(../img/item-icon02.png);
+	}
+	.available-item-v3 & {
+		background-image: url(../img/item-icon03.png);
+	}
+	.available-item-v4 & {
+		background-image: url(../img/item-icon04.png);
+	}
+}
+/**
+ * 下部コンテンツ
+ */
+.latestworks {
+	margin: 0 0 20px 0;
+	padding: 10px 0 30px 0;
+	border-bottom: 1px #dfe1e5 solid;
+}
+#works-slider {
+	position: relative;
+	.owl-controls {
+		position: absolute;
+		top: -60px;
+		right: 0;
+		margin: 0;
+		.owl-prev,
+		.owl-next {
+			background-color: #fff;
+			background-repeat: no-repeat;
+			border-radius: 0;
+			opacity: 1;
+			margin: 7px;
+			padding: 0 20px 4px 0;
+			text-indent: -9999px;
+		}
+		.owl-prev {
+			background-image: url(../img/item-icon06.png);
+		}
+		.owl-next {
+			background-image: url(../img/item-icon07.png);
+		}
+	}
+}
+.contentsbottom-title {
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding: 16px 0 16px 40px;
+	font-size: r-size(15,14);
+}
+.contentsbottom-title-v1 {
+	background-image: url(../img/item-icon05.png);
+	margin: 0 0 20px 0;
+	border-bottom: 1px #dfe1e5 solid;
+}
+.contentsbottom-title-v2 {
+	background-image: url(../img/item-icon08.png);
+}
+.contentsbottom-title-v3 {
+	background-image: url(../img/item-icon09.png);
+}
+.ceo {
+	font-style: italic;
+	font-weight: bold;
+}
+.clients {
+	li {
+		float: left;
+	}
+}
+.download {
+	background-color: #e8fcfe;
+	border: 1px #81e4ed solid;
+	padding: 20px 0 20px 0;
+	font-size: r-size(16,14);
+	.download-txt {
+		float: left;
+		width: 64%;
+		margin: 1em 4% 1em 4%;
+	}
+	.download-btn {
+		float: left;
+		width: 28%;
+	}
+}
+/**
+ * フッター
+ * .l-footer
+ */
+.footer-item {
+	float: left;
+	.footer-item-title {
+		font-size: r-size(15,14);
+	}
+}
+.footer-item-v1 {
+	width: 30% - 3%;
+	margin: 0 3% 0 0;
+}
+.footer-item-v2 {
+	width: 14.8% - 2%;
+	margin: 0 2% 0 0;
+}
+.footer-item-v3 {
+	width: 16.8% - 2%;
+	margin: 0 2% 0 0;
+}
+.footer-item-v2,
+.footer-item-v3 {
+	li {
+		margin: 0 0 .8em 0;
+	}
+}
+.footer-item-v4 {
+	width: 19.2% - 2%;
+	margin: 0 2% 0 0;
+	dt {
+		font-weight: bold;
+	}
+	dd {
+		margin: 0 0 1em 0;
+	}
+	address {
+		font-style: normal;
+	}
+}
+.footer-item-v5 {
+	width: 19.2%;
+	li {
+		float: left;
+		width: 53px;
+		margin: 0 16px 10px 0;
+		&.mr0 {
+			margin: 0 0 10px 0;
+		}
+	}
+}
+.l-footer-copyright {
+	.l-footer-copyright-logo {
+		padding: 0 0 40px;
+	}
+}

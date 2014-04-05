@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   レイアウト
+   ========================================================================== */
+/**
+ * ヘッダー
+ * .l-header
+ */
+.l-header-outer {
+	position: relative;
+	background-color: $bgcolor01;
+	border-bottom: 1px #6ec2ca solid;
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+.l-header {
+	width: $width;
+	margin: 0 auto;
+	padding: 0 0 36px;
+	.top-logo {
+		float: left;
+		margin: 36px 0 0 0;
+	}
+	.l-gnav {
+		float: right;
+		margin: 50px 0 0 0;
+	}
+}
+@media ( max-width: $break-small ) {
+.l-header {
+}
+}
+/**
+ * メイン
+ * .l-main
+ */
+.l-mainvisual-outer {
+	background-color: #81e4ed;
+}
+.l-mainvisual {
+	width: $width;
+	margin: 0 auto;
+}
+.l-available-outer {
+	background-color: $bgcolor01;
+	border-bottom: 1px #d9d9d9 solid;
+}
+.l-available {
+	width: $width;
+	margin: 0 auto;
+}
+.l-contentsbottom-outer {
+	width: $width;
+	margin: 0 auto 40px;
+}
+/* TESTIMONIALS + OUR CLIENTS */
+.l-contentsbottom-outer02 {
+	margin: 0 0 40px 0;
+}
+.l-2dividel {
+	float: left;
+	width: 500px;
+//	margin: 0 3% 0 0;
+}
+.l-2divider {
+	float: right;
+	width: 479px;
+}	
+/**
+ * フッター
+ * .l-footer
+ */
+.l-footer-outer {
+	background-color: $bgcolor01;
+	border-top: 1px #d9d9d9 solid;
+}
+.l-footer {
+	width: $width;
+	margin: 40px auto 40px;
+}
+.l-footer-copyright {
+	width: $width;
+	margin: 0 auto;
+	small {
+		float: left;
+	}
+	.l-footer-copyright-logo {
+		float: right;
+	}
+}

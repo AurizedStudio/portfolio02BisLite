@@ -1,0 +1,765 @@
+@charset "UTF-8";
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+  color: #363636;
+}
+
+body {
+  background-color: #fff;
+  font-size: 0.875em;
+  line-height: 1.42857;
+}
+
+a {
+  color: #2aacc8;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: underline;
+}
+
+.box-left {
+  float: left;
+}
+
+.box-right {
+  float: right;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.ml10 {
+  margin-left: 10px !important;
+}
+
+.mr10 {
+  margin-right: 10px !important;
+}
+
+.ml15 {
+  margin-left: 15px !important;
+}
+
+.mr15 {
+  margin-right: 15px !important;
+}
+
+.ml20 {
+  margin-left: 20px !important;
+}
+
+.mr20 {
+  margin-right: 20px !important;
+}
+
+.ml25 {
+  margin-left: 25px !important;
+}
+
+.mr25 {
+  margin-right: 25px !important;
+}
+
+.ml30 {
+  margin-left: 30px !important;
+}
+
+.mr30 {
+  margin-right: 30px !important;
+}
+
+.ml35 {
+  margin-left: 35px !important;
+}
+
+.mr35 {
+  margin-right: 35px !important;
+}
+
+.ml40 {
+  margin-left: 40px !important;
+}
+
+.mr40 {
+  margin-right: 40px !important;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #ff7c5f;
+  text-shadow: none;
+}
+
+::selection {
+  background: #ff7c5f;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+img {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   レイアウト
+   ========================================================================== */
+/**
+ * ヘッダー
+ * .l-header
+ */
+.l-header-outer {
+  position: relative;
+  background-color: #e8ebf1;
+  border-bottom: 1px #6ec2ca solid;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.l-header {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0 0 36px;
+}
+.l-header .top-logo {
+  float: left;
+  margin: 36px 0 0 0;
+}
+.l-header .l-gnav {
+  float: right;
+  margin: 50px 0 0 0;
+}
+
+/**
+ * メイン
+ * .l-main
+ */
+.l-mainvisual-outer {
+  background-color: #81e4ed;
+}
+
+.l-mainvisual {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.l-available-outer {
+  background-color: #e8ebf1;
+  border-bottom: 1px #d9d9d9 solid;
+}
+
+.l-available {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.l-contentsbottom-outer {
+  width: 1000px;
+  margin: 0 auto 40px;
+}
+
+/* TESTIMONIALS + OUR CLIENTS */
+.l-contentsbottom-outer02 {
+  margin: 0 0 40px 0;
+}
+
+.l-2dividel {
+  float: left;
+  width: 500px;
+}
+
+.l-2divider {
+  float: right;
+  width: 479px;
+}
+
+/**
+ * フッター
+ * .l-footer
+ */
+.l-footer-outer {
+  background-color: #e8ebf1;
+  border-top: 1px #d9d9d9 solid;
+}
+
+.l-footer {
+  width: 1000px;
+  margin: 40px auto 40px;
+}
+
+.l-footer-copyright {
+  width: 1000px;
+  margin: 0 auto;
+}
+.l-footer-copyright small {
+  float: left;
+}
+.l-footer-copyright .l-footer-copyright-logo {
+  float: right;
+}
+
+/* ==========================================================================
+   各種（モジュール）
+   ========================================================================== */
+/**
+ * グローバルナビゲーション
+ * .l-gnav
+ */
+.l-gnav ul {
+  margin: 0;
+}
+
+.gnav {
+  margin: 0;
+  font-weight: bold;
+}
+.gnav a {
+  display: block;
+  padding: 6px 18px 6px 10px;
+  border-top: 4px #e8ebf1 solid;
+}
+.gnav a:link {
+  color: #000;
+}
+.gnav a:visited {
+  color: #000;
+}
+.gnav a:hover {
+  color: #2aacc8;
+}
+.gnav a:active {
+  color: #2aacc8;
+}
+.gnav li {
+  float: left;
+  margin: 0 0 0 20px;
+}
+.gnav .gnav-low {
+  position: relative;
+}
+.gnav .gnav-low a {
+  background-image: url(../img/item-icon10.png);
+  background-repeat: no-repeat;
+  background-position: 94% .9em;
+}
+.gnav .gnav-low ul {
+  position: absolute;
+  top: 100%;
+  z-index: 10;
+}
+.gnav .gnav-low ul li {
+  float: none;
+  background-color: #fff;
+  margin: 0;
+  padding: 0 4px;
+  white-space: nowrap;
+}
+.gnav .gnav-low ul li a {
+  background-image: none;
+  padding: 10px 6px;
+  border: none;
+  border-bottom: 1px #e7e7e7 solid;
+}
+.gnav .gnav-low ul li:last-child {
+  border-bottom: 4px #2aacc8 solid;
+}
+.gnav .gnav-low ul li:last-child a {
+  border: none;
+}
+.gnav .sfHover {
+  background-color: #fff;
+}
+.gnav .sfHover a {
+  border-top: 4px #2aacc8 solid;
+}
+
+/**
+ * メインビジュアル
+ * .l-mainvisual
+ */
+.l-mainvisual {
+  padding: 20px 0 10px;
+}
+
+/**
+ * サービス
+ * .l-availabe
+ */
+.l-available {
+  padding: 40px 0 30px;
+}
+
+.available-item {
+  float: left;
+  width: 230px;
+  padding: 0 26px 0 0;
+}
+.available-item .available-item-title {
+  background-repeat: no-repeat;
+  background-position: left center;
+  height: 3em;
+  padding: 22px 0 0 50px;
+  font-size: 1.07143em;
+}
+.available-item .available-item-more {
+  background-image: url(../img/item-icon11.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 0 0 0 14px;
+}
+
+.available-item-v4 {
+  padding: 0;
+}
+
+.available-item-v1 .available-item-title {
+  background-image: url(../img/item-icon01.png);
+}
+.available-item-v2 .available-item-title {
+  background-image: url(../img/item-icon02.png);
+}
+.available-item-v3 .available-item-title {
+  background-image: url(../img/item-icon03.png);
+}
+.available-item-v4 .available-item-title {
+  background-image: url(../img/item-icon04.png);
+}
+
+/**
+ * 下部コンテンツ
+ */
+.latestworks {
+  margin: 0 0 20px 0;
+  padding: 10px 0 30px 0;
+  border-bottom: 1px #dfe1e5 solid;
+}
+
+#works-slider {
+  position: relative;
+}
+#works-slider .owl-controls {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  margin: 0;
+}
+#works-slider .owl-controls .owl-prev,
+#works-slider .owl-controls .owl-next {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  opacity: 1;
+  margin: 7px;
+  padding: 0 20px 4px 0;
+  text-indent: -9999px;
+}
+#works-slider .owl-controls .owl-prev {
+  background-image: url(../img/item-icon06.png);
+}
+#works-slider .owl-controls .owl-next {
+  background-image: url(../img/item-icon07.png);
+}
+
+.contentsbottom-title {
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 16px 0 16px 40px;
+  font-size: 1.07143em;
+}
+
+.contentsbottom-title-v1 {
+  background-image: url(../img/item-icon05.png);
+  margin: 0 0 20px 0;
+  border-bottom: 1px #dfe1e5 solid;
+}
+
+.contentsbottom-title-v2 {
+  background-image: url(../img/item-icon08.png);
+}
+
+.contentsbottom-title-v3 {
+  background-image: url(../img/item-icon09.png);
+}
+
+.ceo {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.clients li {
+  float: left;
+}
+
+.download {
+  background-color: #e8fcfe;
+  border: 1px #81e4ed solid;
+  padding: 20px 0 20px 0;
+  font-size: 1.14286em;
+}
+.download .download-txt {
+  float: left;
+  width: 64%;
+  margin: 1em 4% 1em 4%;
+}
+.download .download-btn {
+  float: left;
+  width: 28%;
+}
+
+/**
+ * フッター
+ * .l-footer
+ */
+.footer-item {
+  float: left;
+}
+.footer-item .footer-item-title {
+  font-size: 1.07143em;
+}
+
+.footer-item-v1 {
+  width: 27%;
+  margin: 0 3% 0 0;
+}
+
+.footer-item-v2 {
+  width: 12.8%;
+  margin: 0 2% 0 0;
+}
+
+.footer-item-v3 {
+  width: 14.8%;
+  margin: 0 2% 0 0;
+}
+
+.footer-item-v2 li,
+.footer-item-v3 li {
+  margin: 0 0 .8em 0;
+}
+
+.footer-item-v4 {
+  width: 17.2%;
+  margin: 0 2% 0 0;
+}
+.footer-item-v4 dt {
+  font-weight: bold;
+}
+.footer-item-v4 dd {
+  margin: 0 0 1em 0;
+}
+.footer-item-v4 address {
+  font-style: normal;
+}
+
+.footer-item-v5 {
+  width: 19.2%;
+}
+.footer-item-v5 li {
+  float: left;
+  width: 53px;
+  margin: 0 16px 10px 0;
+}
+.footer-item-v5 li.mr0 {
+  margin: 0 0 10px 0;
+}
+
+.l-footer-copyright .l-footer-copyright-logo {
+  padding: 0 0 40px;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+}
+.ie6 .ir, .ie7 .ir {
+  text-indent: -9999px;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * blockskip
+ */
+.blockskip {
+  z-index: 9999;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.ie6 .blockskip {
+  position: relative;
+}
+.blockskip a {
+  display: block;
+  float: left;
+  background: black;
+  width: 100%;
+  /*	min-width: 980px; */
+  height: 1px;
+  margin: -1px 0 0 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.07143em;
+  color: #333;
+  line-height: 0;
+  cursor: default;
+  overflow: hidden;
+}
+.blockskip a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.blockskip a.show {
+  color: #fff;
+  /* height: 1em; */
+  height: auto;
+  margin-top: -3px;
+  padding: 5px 0;
+  font-size: 1em;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before, .clearfix:after,
+.l-header:before,
+.l-header:after,
+.gnav:before,
+.gnav:after,
+.l-available:before,
+.l-available:after,
+.l-contentsbottom-outer02:before,
+.l-contentsbottom-outer02:after,
+.download:before,
+.download:after,
+.l-footer:before,
+.l-footer:after,
+.footer-item-v5:before,
+.footer-item-v5:after,
+.l-footer-copyright:before,
+.l-footer-copyright:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after,
+.l-header:after,
+.gnav:after,
+.l-available:after,
+.l-contentsbottom-outer02:after,
+.download:after,
+.l-footer:after,
+.footer-item-v5:after,
+.l-footer-copyright:after {
+  clear: both;
+}
+.ie6 .clearfix, .ie7 .clearfix, .ie6
+.l-header, .ie7
+.l-header, .ie6
+.gnav, .ie7
+.gnav, .ie6
+.l-available, .ie7
+.l-available, .ie6
+.l-contentsbottom-outer02, .ie7
+.l-contentsbottom-outer02, .ie6
+.download, .ie7
+.download, .ie6
+.l-footer, .ie7
+.l-footer, .ie6
+.footer-item-v5, .ie7
+.footer-item-v5, .ie6
+.l-footer-copyright, .ie7
+.l-footer-copyright {
+  /* For IE 6/7 only Include this rule to trigger hasLayout and contain floats. */
+  zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  * {
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
