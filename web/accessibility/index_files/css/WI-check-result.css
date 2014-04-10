@@ -1,0 +1,1531 @@
+/*@charset "UTF-8";*/
+/*WebInspectorチェック結果画面CSS*/
+/* 全体
+-----------------------------------------------------------*/
+BODY {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	FONT-SIZE: small;
+	BACKGROUND: #FFF;
+	PADDING-BOTTOM: 0px; MARGIN: 0px;
+	COLOR: #000000;
+	LINE-HEIGHT: 1.4em;
+	PADDING-TOP: 0px;
+	FONT-FAMILY:"MS PGothic";
+}
+DIV {
+	FONT-SIZE: 100%;
+}
+P {
+	FONT-SIZE: 100%;
+}
+SPAN {
+	FONT-SIZE: 100%;
+}
+A {
+	FONT-SIZE: 100%;
+}
+
+UL {
+	FONT-SIZE: 100%;
+	LIST-STYLE-TYPE: none;
+	PADDING: 0px;
+	MARGIN: 0px;
+}
+LI {
+	FONT-SIZE: 100%;
+	PADDING: 0px;
+	MARGIN: 0px;
+}
+/* リンクテキスト装飾
+-------------------------------------------------------*/
+A:link {
+	COLOR: #003399;
+	TEXT-DECORATION: underline;
+}
+ A:visited {
+	COLOR: #660099;
+	TEXT-DECORATION: underline;
+}
+IMG {
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	BORDER-RIGHT-WIDTH: 0px;
+}
+A {
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	BORDER-RIGHT-WIDTH: 0px;
+}
+
+/* 項目スタイル
+----------------------------------------------*/
+/* --アクセシビリティチェック結果-- */
+H1 {
+	FONT-SIZE: 160%;
+	MARGIN-TOP:13px;
+	MARGIN-BOTTOM:13px;
+}
+/* --１階層目-- */
+H2 {
+    MARGIN-TOP:0px;
+	FONT-SIZE: 160%;
+	TEXT-INDENT: 30px;
+	line-height: 130%;
+	BACKGROUND-IMAGE: url(../images/main-list.gif);
+	BACKGROUND-REPEAT: no-repeat;
+	BACKGROUND-POSITION: left center;
+
+}
+/* --２階層目-- */
+H3 {
+	MARGIN: 0px;
+	FONT-SIZE: 160%;
+	TEXT-INDENT: 30px;
+	LINE-HEIGHT: 130%;
+	BACKGROUND-IMAGE: url(../images/main-list.gif);
+	BACKGROUND-REPEAT: no-repeat;
+	BACKGROUND-POSITION: left center;
+	FLOAT: LEFT;
+
+}
+H4 {
+	MARGIN: 0px;
+	FONT-SIZE: 160%;
+	TEXT-INDENT: 36px;
+	LINE-HEIGHT: 130%;
+	BACKGROUND-IMAGE: url(../images/inner-list.gif);
+	BACKGROUND-REPEAT: no-repeat;
+	BACKGROUND-POSITION: left center;
+	WHITE-SPACE:pre;
+	MARGIN-BOTTOM:10px;
+
+}
+H5 {
+	MARGIN: 0px;
+	FONT-SIZE: 110%;
+	FONT-WEIGHT: lighter;
+}
+/*-- header --*/
+DIV#headerBox{
+	WIDTH: 950px;
+	HEIGHT: 115px;
+	BACKGROUND-IMAGE: url(../images/title-back.gif);
+	BACKGROUND-REPEAT: no-repeat;
+	MARGIN: 0px auto 10px auto;
+}
+#headerBox DIV.title_Logo{
+	WIDTH: 60px;
+	HEIGHT: 76px;
+	PADDING: 10px 0px 10px 15px;
+	FLOAT:left;
+}
+#headerBox DIV.title_Text{
+	WIDTH: 875px;
+	HEIGHT: 76px;
+	LINE-HEIGHT: 3em;
+	FLOAT:left;
+}
+*:first-child+html #headerBox DIV.title_Text{
+	LINE-HEIGHT:5em;
+}
+#headerBox DIV.time_Box{
+	PADDING-RIGHT: 10px;
+	TEXT-ALIGN: RIGHT;
+	LINE-HEIGHT: 3em;
+}
+/*-- footer --*/
+DIV#footerBox{
+	WIDTH: 950px;
+	HEIGHT: auto;
+	BACKGROUND-COLOR: #595959;
+	MARGIN: 15px auto 10px auto;
+
+	PADDING-RIGHT: 5px;
+	TEXT-ALIGN: right;
+
+}
+#footerBox SPAN{
+	COLOR: #FFFFFF;
+	FONT-SIZE: 90%;
+}
+/*-- containerbox --*/
+DIV#container-Box{
+	WIDTH: 950px;
+	MARGIN: 0px auto 0px auto;
+}
+/*--大見出し--*/
+#container-Box DIV.sentence-Fir{
+	HEIGHT: 27px;
+	MARGIN-BOTTOM: 20px;
+}
+/*--中見出し--*/
+#container-Box DIV.sentence-Sec{
+	BACKGROUND-COLOR: #dddddd;
+	PADDING:8px 15px 8px 15px;
+	MARGIN-BOTTOM: 10px;
+	BORDER-TOP: 0px;
+	BORDER-LEFT: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-BOTTOM: 1px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+}
+.sentence-Sec SPAN {
+	FONT-SIZE:160%;
+    FONT-WEIGHT: bold;
+}
+
+/*--小見出し--*/
+#container-Box DIV.sentence-Thi{
+	MARGIN-LEFT: 15px;
+}
+
+/*--ページナビ(このチェック結果の先頭へ,ページの先頭へ,要素・プロパティリストへ)--*/
+#container-Box DIV.page-nav{
+	HEIGHT: 20px;
+	TEXT-ALIGN: right;
+	CLEAR: both;
+}
+.page-nav li {
+	FONT-SIZE:110%;
+	FLOAT:right;
+	MARGIN-RIGHT:13px;
+
+}
+.page-nav li img {
+	MARGIN-BOTTOM: -3px;
+	MARGIN-LEFT: 5px;
+}
+/*--ページナビ(リンクリストを表示する,画像リストを表示する)--*/
+#container-Box DIV.list-page{
+	HEIGHT: 20px;
+	TEXT-ALIGN: right;
+	CLEAR: both;
+	MARGIN-TOP: -10px;
+}
+
+li.open-image {
+	FONT-SIZE:110%;
+	FLOAT:right;
+	MARGIN-LEFT:13px;
+}
+li.open-image img {
+	MARGIN-BOTTOM: -2px;
+	MARGIN-RIGHT: 7px;
+}
+li.open-list {
+	FONT-SIZE:110%;
+	FLOAT:right;
+	MARGIN-LEFT:13px;
+}
+li.open-list img {
+	MARGIN-BOTTOM: -2px;
+	MARGIN-RIGHT: 7px;
+}
+/*--ページナビ(前のファイルの結果を見る,次のファイルの結果を見る)--*/
+li.prev-result{
+	FONT-SIZE:110%;
+	FLOAT:right;
+	PADDING-LEFT:20px;
+	PADDING-RIGHT:10px;
+}
+li.prev-result img{
+	MARGIN-RIGHT: 7px;
+	MARGIN-BOTTOM: -2px;
+}
+li.center-result{
+	FONT-SIZE:110%;
+	FLOAT:right;
+}
+li.next-result{
+	FONT-SIZE:110%;
+	FLOAT:right;
+	PADDING-LEFT:10px;
+
+}
+li.next-result img{
+	MARGIN-LEFT: 7px;
+	MARGIN-BOTTOM: -2px;
+}
+
+li.prev-table{
+	FONT-SIZE:110%;
+	FLOAT:right;
+	MARGIN-TOP: 5px;
+	PADDING-RIGHT:18px;
+}
+li.prev-table img{
+	MARGIN-RIGHT: 7px;
+	MARGIN-BOTTOM: -1px;
+}
+
+li.next-table{
+	FONT-SIZE:110%;
+	FLOAT:right;
+	MARGIN-TOP: 5px;
+	PADDING-RIGHT:18px;
+}
+li.next-table img{
+	MARGIN-LEFT: 7px;
+	MARGIN-BOTTOM: -1px;
+}
+hr.line-Style {
+	WIDTH: 920px;
+	PADDING: 0px;
+	MARGIN-BOTTOM: 20px;
+	BORDER: 0px none;
+	HEIGHT: 1px;
+	BACKGROUND-IMAGE: url(../images/line.gif);
+}
+
+/*--スコア--*/
+#container-Box DIV.score-Box{
+	PADDING: 10px 0px 15px 0px;
+}
+DIV.contents-Score-Lef{
+	MARGIN: 0px 0px 30px 0px;
+	WIDTH: 400px;
+	FLOAT: left;
+}
+TABLE.score-Total{
+	WIDTH: 400px;
+	MARGIN: 0px;
+	BORDER: 1px;
+	BORDER-TOP: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+}
+.score-Total TD{
+	WIDTH:65px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+	FONT-SIZE:120%;
+	VERTICAL-ALIGN:middle;
+	TEXT-ALIGN:left;
+}
+.score-Total TD.score-Kind{
+	BORDER-RIGHT: 0px;
+	TEXT-ALIGN:center;
+}
+
+.score-Total TD.kind-Count{
+	WIDTH: 60px;
+    HEIGHT: 50px;
+	TEXT-ALIGN:right;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+	PADDING: 0px 5px 0px 0px;
+}
+
+.score-Total TD.sum-Count{
+	WIDTH: 100px;
+	TEXT-ALIGN:center;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+}
+/*--スコア100点--*/
+.score-Total TD.score-Rig-5{
+	WIDTH: 100px;
+	HEIGHT: 99px;
+	BACKGROUND-COLOR:#00b050;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN:center;
+}
+/*--スコア～75点--*/
+.score-Total TD.score-Rig-4{
+	WIDTH: 100px;
+	HEIGHT: 99px;
+	BACKGROUND-COLOR:#92d050;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN:center;
+}
+/*--スコア～50点--*/
+.score-Total TD.score-Rig-3{
+	WIDTH: 100px;
+	HEIGHT: 99px;
+	BACKGROUND-COLOR:#ffff00;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN:center;
+}
+/*--スコア～25点--*/
+.score-Total TD.score-Rig-2{
+	WIDTH: 100px;
+	HEIGHT: 99px;
+	BACKGROUND-COLOR:#ffc000;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN:center;
+}
+/*--スコア～0点--*/
+.score-Total TD.score-Rig-1{
+	WIDTH: 100px;
+	HEIGHT: 99px;
+	BACKGROUND-COLOR:#fa9137;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN:center;
+}
+/*--スコア(エラー,確認)--*/
+.score-Total TD.score-Rig{
+	WIDTH: 70px;
+	HEIGHT: 31px;
+	BACKGROUND-COLOR:#ffff99;
+	FONT-WEIGHT: lighter;
+}/*--スコア(なし)--*/
+.score-Total TD.score-Non{
+	WIDTH: 70px;
+	HEIGHT: 31px;
+	BACKGROUND-COLOR:#ffffff;
+	FONT-WEIGHT: lighter;
+}
+/*--スコア説明--*/
+DIV.contents-Score-Rig{
+	WIDTH: 520px;
+	FLOAT: right;
+	MARGIN: 0px;
+}
+.contents-Score-Rig UL {
+	FONT-SIZE: 110%;
+	LIST-STYLE-TYPE: none;
+	PADDING: 0px;
+	MARGIN: 0px;
+	CLEAR:both;
+}
+.contents-Score-Rig LI {
+	WIDTH: 55px;
+	HEIGHT: 22px;
+	PADDING: 6px 10px 0px 10px;
+	FLOAT: left;
+	BORDER: 0px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+}
+.contents-Score-Rig LI.High{
+	WIDTH: 15px;
+	TEXT-ALIGN: right;
+}
+.contents-Score-Rig LI.Low {
+	TEXT-ALIGN: left;
+}
+/*--スコア100点--*/
+.contents-Score-Rig LI.score-Rig-5{
+	BORDER: 1px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+	TEXT-ALIGN: left;
+	BACKGROUND-COLOR:#00b050;
+	TEXT-ALIGN:center;
+}
+/*--スコア～75点--*/
+.contents-Score-Rig LI.score-Rig-4{
+	BORDER: 1px;
+	BORDER-LEFT: 0px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR:#92d050;
+	TEXT-ALIGN:center;
+}
+/*--スコア～50点--*/
+.contents-Score-Rig LI.score-Rig-3{
+	BORDER: 1px;
+	BORDER-LEFT: 0px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR:#ffff00;
+	TEXT-ALIGN:center;
+}
+/*--スコア～25点--*/
+.contents-Score-Rig LI.score-Rig-2{
+	BORDER: 1px;
+	BORDER-LEFT: 0px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR:#ffc000;
+	TEXT-ALIGN:center;
+}
+/*--スコア～0点--*/
+.contents-Score-Rig LI.score-Rig-1{
+	BORDER: 1px;
+	BORDER-LEFT: 0px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR:#fa9137;
+	TEXT-ALIGN:center;
+}
+/*--スコア説明 注意書き--*/
+.contents-Score-Rig TABLE.Sentence-score{
+    MARGIN-TOP: 10px;
+    MARGIN-LEFT: 35px;
+    BORDER-RIGHT-width: 0px;
+    MARGIN-RIGHT: 0px;
+    WIDTH: 500px;
+    FONT-SIZE: 110%;
+}
+.contents-Score-Rig TD.Sentence{
+    VERTICAL-ALIGN: top;
+    PADDING-TOP: 2px;
+    WIDTH: 40px;
+}
+
+.contents-Score-Rig LI.Sentence-icon{
+	WIDTH:300px;
+	MARGIN: 33px 0px 0px 35px;
+	PADDING: 0px;
+	TEXT-ALIGN:left;
+}
+
+/*----チェックしたファイルの一覧--*/
+#container-Box DIV.CF-Box{
+CLEAR: both;
+    MARGIN: 0px;
+	PADDING: 10px 0px 5px 0px;
+}
+TABLE.CF-Tbl{
+	WIDTH: 950px;
+	MARGIN-BOTTOM: 10px;
+	FONT-SIZE:120%;
+	BORDER: 1px;
+	BORDER-TOP: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+}
+.CF-Tbl TH{
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-COLOR:#bcbcbc;
+	BORDER-STYLE:solid;
+	BACKGROUND-COLOR:#f2f2f2;
+}
+.CF-Tbl TH.TblLef{
+	WIDTH: 67px;
+	HEIGHT: 31px;
+}
+.CF-Tbl TH.TblCen{
+	WIDTH: 743px;
+}
+.CF-Tbl TH.TblRig{
+	WIDTH: 142px;
+}
+.CF-Tbl TR.CF-Err{
+	BACKGROUND-COLOR:#FFFF99;
+}
+.CF-Tbl TR.CF-AuthErr{
+	BACKGROUND-COLOR:#FFDDDD;
+}
+.CF-Tbl TD{
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+	FONT-SIZE:120%;
+	FONT-WEIGHT: lighter;
+	VERTICAL-ALIGN:middle;
+	TEXT-ALIGN:center;
+}
+.CF-Tbl TD.CF-Nav{
+	TEXT-ALIGN:left;
+}
+/*--htmlアイコン用リスト--*/
+ .Ico-html LI{
+	LIST-STYLE: none;
+	BACKGROUND-IMAGE: url(../images/html_icon_b.gif);
+	BACKGROUND-REPEAT: no-repeat;
+	PADDING: 8px 6px 6px 35px;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+	MAX-WIDTH: 698px;
+	WIDTH: 698px;
+}
+/*--cssアイコン用リスト--*/
+ .Ico-css LI{
+	LIST-STYLE: none;
+	BACKGROUND-IMAGE: url(../images/css_icon_b.gif);
+	BACKGROUND-REPEAT: no-repeat;
+	PADDING: 8px 6px 6px 35px;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+	MAX-WIDTH: 698px;
+	WIDTH: 698px;
+}
+/*--jsアイコン用リスト--*/
+ .Ico-js LI{
+	LIST-STYLE: none;
+	BACKGROUND-IMAGE: url(../images/js_icon_b.gif);
+	BACKGROUND-REPEAT: no-repeat;
+	PADDING: 8px 6px 6px 35px;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+	MAX-WIDTH: 698px;
+	WIDTH: 698px;
+}
+/*--確認アイコンの説明文用リスト--*/
+ .Ico-check LI{
+	FONT-SIZE: 120%;
+	LIST-STYLE: none;
+	BACKGROUND-IMAGE: url(../images/check_on_s.gif);
+	BACKGROUND-REPEAT: no-repeat;
+	TEXT-INDENT: -10px;
+	MARGIN: 0px 0px 20px 20px;
+	PADDING: 0px 10px 0px 49px;
+}
+/*--リスト用--*/
+ .prop-List LI{
+	FONT-SIZE: 120%;
+	LIST-STYLE: none;
+	TEXT-INDENT: -10px;
+	MARGIN: 0px 0px 0px 20px;
+	PADDING: 0px 10px 0px 10px;
+}
+/*----check-Result--*/
+#container-Box DIV.CR-Box{
+    CLEAR: both;
+	BORDER: 1px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+	MARGIN-BOTTOM: 20px;
+	PADDING-BOTTOM: 10px;
+}
+#container-Box DIV.contents-CR{
+	MARGIN-TOP: 0px;
+	MARGIN-LEFT: 15px;
+	MARGIN-BOTTOM: 20px;
+	WIDTH:935px;
+}
+.contents-CR DIV.result-Exp-Lef{
+	WIDTH: 918px;
+	FLOAT: left;
+	MARGIN:0px 8px;
+
+}
+.contents-CR DIV.result-Notice{
+	FONT-SIZE: 120%;
+        MARGIN-LEFT: 15px;
+}
+.contents-CR DIV.result-Exp-Rig{
+	WIDTH: 445px;
+	FLOAT: right;
+	MARGIN-LEFT: 10px;
+	MARGIN-TOP: 10px;
+}
+#container-Box DIV.contents-CF{
+	MARGIN-BOTTOM: 20px;
+	width:950px;
+}
+
+/*--エラー説明用リスト--*/
+.result-Exp-Rig UL{
+	FONT-SIZE: 110%;
+	clear: both;
+}
+.result-Exp-Rig LI{
+	HEIGHT:35px;
+	PADDING: 8px 0px 0px 0px;
+	LIST-STYLE: none;
+	FLOAT: left;
+}
+.result-Exp-Rig LI.mark01-icon{
+	BACKGROUND-IMAGE: url(../images/mark01.gif);
+	BACKGROUND-REPEAT: no-repeat;
+	PADDING: 6px 5px 0px 40px;
+}
+.result-Exp-Rig LI.mark02-icon{
+	BACKGROUND-IMAGE: url(../images/mark02.gif);
+	BACKGROUND-REPEAT: no-repeat;
+	PADDING: 6px 5px 0px 40px;
+}
+.contents-CR TABLE.CR-Tbl{
+	WIDTH: 918px;
+	MARGIN-BOTTOM: 10px;
+	FONT-SIZE:120%;
+	BORDER: 1px;
+	BORDER-TOP: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+}
+.contents-CF TABLE.CR-Tbl{
+	width:950px;
+	MARGIN-BOTTOM: 20px;
+	FONT-SIZE:120%;
+	BORDER: 1px;
+	BORDER-TOP: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+}
+
+.CR-Tbl TD{
+	HEIGHT: 31px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+	FONT-SIZE:120%;
+	FONT-WEIGHT: lighter;
+	VERTICAL-ALIGN: middle;
+	TEXT-ALIGN: center;
+}
+/*--チェック結果概要（チェック対象ファイル名）左列--*/
+.CR-Tbl TD.TblLef{
+	WIDTH: 218px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR:#bcbcbc;
+	VERTICAL-ALIGN: middle;
+	BACKGROUND-COLOR: #F2F2F2;
+	TEXT-ALIGN: left;
+}
+.contents-CF TD.TblLef{
+	TEXT-ALIGN: center;
+	FONT-WEIGHT: bold;
+}
+/*--チェック結果概要（チェック対象ファイル名）右列--*/
+.CR-Tbl TD.TblRig{
+	PADDING-RIGHT: 5px;
+	TEXT-ALIGN:left;
+}
+/*--チェック結果概要（問題点の件数）右列--*/
+/*--エラーあり--*/
+.CR-Tbl TD.TblRig-Err{
+	TEXT-ALIGN:left;
+	BACKGROUND-COLOR: #FFFF99;
+	PADDING: 0px 5px 0px 5px;
+}
+/*--エラーなし--*/
+.CR-Tbl TD.TblRig-Non{
+	TEXT-ALIGN:left;
+	BACKGROUND-COLOR: #FFFFFF;
+	PADDING: 0px 5px 0px 5px;
+}
+
+/*--概要用パス幅指定--*/
+Li.brief-Length {
+	MAX-WIDTH: 870px;
+	WIDTH: 870px;
+}
+
+/*--達成件数--*/
+TABLE.ach-Count{
+	WIDTH: 902px;
+	MARGIN-BOTTOM: 10px;
+	FONT-SIZE:120%;
+	BORDER: 1px;
+	BORDER-TOP: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR: #bcbcbc;
+}
+/*--達成件数（問題点の件数）右列--*/
+.ach-Count TH{
+	HEIGHT: 25px;
+	WIDTH: 130px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-COLOR: #bcbcbc;
+	BORDER-STYLE: solid;
+	BACKGROUND-COLOR: #f2f2f2;
+	MARGIN:0px;
+	TEXT-ALIGN: center;
+}
+.ach-Count TH.ach-sumCount{
+	WIDTH: 507px;
+}
+
+.ach-Count TD{
+	HEIGHT: 54px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+	FONT-SIZE: 120%;
+	FONT-WEIGHT: lighter;
+	VERTICAL-ALIGN: middle;
+	TEXT-ALIGN: center;
+}
+.ach-Count TD.ach-sumCount{
+	WIDTH: 100px;
+}
+.ach-Count TD.ach-Kind{
+    PADDING:0 5px;
+	BORDER-RIGHT: 0px;
+	FONT-SIZE: 130%;
+	TEXT-ALIGN: left;
+}
+.ach-Count TD.ach-Name{
+    WIDTH:60px;
+	BORDER-RIGHT: 0px;
+	FONT-SIZE: 130%;
+	TEXT-ALIGN: left;
+}
+.ach-Count TD.kind-Detail{
+    PADDING-LEFT:3px;
+	FONT-SIZE: 100%;
+	TEXT-ALIGN: left;
+}
+/*--達成件数（1件以上のセルに使用する色つきセル）--*/
+.ach-Count TD.Count-num{
+	BACKGROUND-COLOR: #FFFF99;
+}
+/*--チェック結果詳細(リンク)--*/
+DIV.change-Tab{
+	WIDTH: 948px;
+    PADDING-TOP:20px;
+}
+DIV.tab-Space{
+    CLEAR:left;
+	MIN-HEIGHT: 20px;
+}
+DIV.link-Map{
+    MARGIN-TOP: 22px;
+    MARGIN-BOTTOM: -1px;
+    MARGIN-RIGHT: 5px;
+    FONT-SIZE: 130%;
+    FLOAT: right;
+}
+
+.link-Map DIV{
+	PADDING: 2px 5px 1px 5px;
+	MARGIN: 2px 1px 1px 1px;
+    FLOAT:left;
+	BORDER:1px;
+	BORDER-COLOR: #BCBCBC;
+	BORDER-STYLE: solid;
+ 	BORDER-BOTTOM-STYLE: none;
+    BACKGROUND-COLOR: #FFFFFF;
+	TEXT-ALIGN: center;
+	MIN-WIDTH: 115px;
+	MIN-HEIGHT: 18.5px;
+}
+div.current-page {
+	MARGIN: 0px 1px;
+    MARGIN-BOTTOM: -1.2px;
+	PADDING: 3px 5px 2px 5px;
+	BORDER:1px;
+	BORDER-COLOR: #BCBCBC #BCBCBC #DDDDDD #BCBCBC;
+	BORDER-STYLE: solid;
+	BACKGROUND-COLOR: #DDDDDD;
+	FONT-WEIGHT: bold;
+	MIN-WIDTH: 120px;
+	MIN-HEIGHT: 19px;
+}
+.link-Map BR{
+    CLEAR:left;
+}
+
+.link-Map DIV.other-page:hover{
+    BACKGROUND-COLOR: #F2F2F2;
+}
+
+/*--チェック結果詳細(ソースごとに表示)--*/
+#container-Box DIV.contents-CD{
+	CLEAR:left;
+	MARGIN-LEFT: 15px;
+	MARGIN-BOTTOM: 20px;
+}
+.contents-CD TABLE.che-Details{
+	WIDTH: 918px;
+	MARGIN-BOTTOM: 20px;
+	FONT-SIZE: 120%;
+	BORDER: 1px;
+	BORDER-TOP: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+}
+.che-Details TH{
+	HEIGHT: 50px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-COLOR: #bcbcbc;
+	BORDER-STYLE: solid;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+.che-Details TD{
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+	FONT-SIZE: 120%;
+	FONT-WEIGHT: lighter;
+	VERTICAL-ALIGN: middle;
+	TEXT-ALIGN: center;
+}
+/*--チェック結果詳細（行）--*/
+.che-Details TD.line-Cell{
+	WIDTH: 42px;
+	PADDING-TOP: 5px;
+	VERTICAL-ALIGN:top;
+}
+/*--チェック結果詳細（ソース）--*/
+.che-Details TD.source-Cell{
+	FONT-SIZE: 110%;
+	WIDTH: 102px;
+	PADDING: 5px;
+	TEXT-ALIGN: left;
+	VERTICAL-ALIGN:top;
+}
+/*--チェック結果詳細（画面で確認）--*/
+.che-Details TD.screen-Cell{
+	WIDTH: 76px;
+}
+/*--チェック結果詳細（エラー/確認）--*/
+.che-Details TD.status-Cell{
+	PADDING: 3px 0px 3px 3px;
+	BORDER-RIGHT: 0px;
+    WIDTH: 25px;
+	VERTICAL-ALIGN:top;
+}
+/*--チェック結果詳細（問題点）--*/
+.che-Details TD.problem-Cell{
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+	PADDING: 3px 3px 3px 3px;
+	MAX-WIDTH: 498px;
+	TEXT-ALIGN: left;
+	VERTICAL-ALIGN:top;
+	FONT-SIZE:100%;
+}
+/*--チェック結果詳細（達成等級）--*/
+.che-Details TD.grade-Cell{
+	WIDTH: 75px;
+}
+/*--チェック結果詳細（達成基準）--*/
+.che-Details TD.reference-Cell{
+	WIDTH: 75px;
+}
+/*--チェック結果詳細（実装方法）--*/
+.che-Details TD.method-Cell{
+	WIDTH: 75px;
+}
+/*--確認アイコンの説明--**/
+#container-Box DIV.contents-CE{
+	MARGIN-LEFT: 15px;
+	MARGIN-BOTTOM: 20px;
+}
+
+/*--プロパティリストの説明--**/
+#container-Box DIV.contents-prop{
+	MARGIN-LEFT: 15px;
+	CLEAR:left;
+}
+
+.contents-prop TABLE.contents-prop-tbl{
+	WIDTH: 918px;
+	MARGIN-BOTTOM: 20px;
+	FONT-SIZE:120%;
+	BORDER: 1px;
+	BORDER-TOP: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+}
+
+.contents-prop TH.TblLef{
+	WIDTH: 50px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-COLOR: #bcbcbc;
+	BORDER-STYLE: solid;
+	BACKGROUND-COLOR: #f2f2f2;
+	PADDING:3px;
+}
+
+.contents-prop TH.TblCen{
+	WIDTH: 500px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-COLOR: #bcbcbc;
+	BORDER-STYLE: solid;
+	BACKGROUND-COLOR: #f2f2f2;
+	PADDING:3px;
+}
+
+.contents-prop TH.TblRight{
+	WIDTH: 868px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-COLOR: #bcbcbc;
+	BORDER-STYLE: solid;
+	BACKGROUND-COLOR: #f2f2f2;
+	PADDING:3px;
+}
+
+.contents-prop TD{
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+	FONT-WEIGHT: lighter;
+	VERTICAL-ALIGN: middle;
+	FONT-SIZE:90%;
+	PADDING:3px;
+}
+
+.contents-prop TD.PropNav{
+	TEXT-ALIGN: center;
+}
+
+/*--チェック結果詳細（問題ごと表示）--*/
+#container-Box DIV.contents-CP{
+	MARGIN-LEFT: 15px;
+	MARGIN-BOTTOM: 20px;
+}
+
+#container-Box DIV.contents-CP.Head{
+	CLEAR:left;
+	MARGIN-LEFT: 15px;
+	MARGIN-BOTTOM: 3px;
+}
+
+.contents-CP TABLE.che-Problem{
+	WIDTH: 918px;
+	MARGIN-BOTTOM: 10px;
+	FONT-SIZE:120%;
+	BORDER: 1px;
+	BORDER-TOP: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+}
+.contents-CP.Head TABLE.che-Problem{
+	WIDTH: 918px;
+	MARGIN-BOTTOM: 0px;
+	FONT-SIZE:120%;
+	BORDER: 0px;
+}
+.che-Problem TH{
+	HEIGHT: 50px;
+	BORDER: 0px;
+	BORDER-LEFT: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-COLOR: #bcbcbc;
+	BORDER-STYLE: solid;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+.Head TH{
+	HEIGHT: 50px;
+	PADDING: 0px 5px 0px 5px;
+	BORDER: 0px;
+	BACKGROUND-COLOR: #e0e0e0;
+}
+.che-Problem TH.Prob-Title{
+	TEXT-ALIGN:center;
+	WIDTH:70px;
+}
+.che-Problem TH.Prob-Detail{
+	TEXT-ALIGN:left;
+	PADDING:5px;
+}
+.Prob-Detail SPAN{
+	FONT-WEIGHT: lighter;
+}
+.che-Problem TD{
+	HEIGHT: 28px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+	FONT-SIZE: 120%;
+	FONT-WEIGHT: lighter;
+	VERTICAL-ALIGN: middle;
+	TEXT-ALIGN: center;
+}
+/*--チェック結果詳細（実装方法）--*/
+.che-Problem TD.method-Cell{
+	WIDTH: 75px;
+	VERTICAL-ALIGN:top;
+    PADDING-TOP: 5px;
+}
+/*--チェック結果詳細（行）--*/
+.che-Problem TD.line-Cell{
+	WIDTH: 50px;
+}
+/*--ページナビ(ソースごとに表示/問題ごとに表示)--*/
+h4.result-header{
+	FLOAT:left;
+}
+
+div.result-source{
+	FONT-SIZE:110%;
+	FLOAT:right;
+	MARGIN-TOP: 8px;
+	PADDING-RIGHT:20px;
+}
+
+div.result-problem{
+	FONT-SIZE:110%;
+	FLOAT:right;
+	MARGIN-TOP: 8px;
+	PADDING-RIGHT:20px;
+}
+/*--チェック結果詳細（ソース）--*/
+.che-Problem TD.sourceOnly-Cell{
+	FONT-SIZE: 110%;
+	WIDTH: 136px;
+	PADDING: 0px 5px 0px 5px;
+	TEXT-ALIGN: left;
+}
+/*--チェック結果詳細（ソース）--*/
+.che-Problem TD.source-Cell{
+	FONT-SIZE: 110%;
+	WIDTH: 136px;
+	PADDING: 0px 5px 0px 5px;
+	TEXT-ALIGN: left;
+    BORDER-RIGHT: 0px;
+
+}
+/*--チェック結果詳細（画面で確認）--*/
+.che-Problem TD.screen-Cell{
+	PADDING-RIGHT: 3px;
+	WIDTH: 40px;
+}
+/*--チェック結果詳細（エラー/確認）--*/
+.che-Problem TD.status-Cell{
+	PADDING: 3px 0px 3px 3px;
+	BORDER-RIGHT: 0px;
+    WIDTH: 25px;
+	VERTICAL-ALIGN:top;
+}
+/*--チェック結果詳細（問題点）--*/
+.che-Problem TD.problem-Cell{
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+	PADDING: 3px 3px 3px 3px;
+	MAX-WIDTH: 565px;
+	TEXT-ALIGN: left;
+	VERTICAL-ALIGN:top;
+	FONT-SIZE:100%;
+}
+
+/**--チェック結果詳細(要素・プロパティリスト)--**/
+#container-Box DIV.contents-CL{
+	CLEAR:left;
+	MARGIN-LEFT: 10px;
+    MARGIN-BOTTOM: 20px;
+}
+.contents-CL DIV.CRI-List{
+    BACKGROUND-COLOR: #DDDDDD;
+    BORDER: 1px solid #BCBCBC;
+    FONT-SIZE: 120%;
+    FONT-WEIGHT: bold;
+    MARGIN: 0px 15px 0px 5px;
+    PADDING: 10px;
+    MIN-HEIGHT:18px;
+}
+.contents-CL DIV.CRI-Frame{
+    BORDER-COLOR: #BCBCBC;
+    BORDER-STYLE: solid;
+    BORDER-WIDTH: 0 1px 1px;
+    HEIGHT: 100%;
+    MARGIN-LEFT: 5px;
+    MARGIN-RIGHT: 15px;
+    MARGIN-BOTTOM: 10px;
+}
+.contents-CL DIV.CRI-box{
+    FLOAT: left;
+    MARGIN-BOTTOM: 10px;
+    MARGIN-LEFT: 8.2px;
+    MARGIN-TOP: 10px;
+}
+.contents-CL TABLE.CRI-Tbl{
+	BORDER: 1px;
+	BORDER-TOP: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+}
+.contents-CL BR.clear-LF{
+    CLEAR:left;
+}
+.CRI-Tbl TH{
+	BORDER: 0px;
+	BORDER-LEFT: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-COLOR: #bcbcbc;
+	BORDER-STYLE: solid;
+    HEIGHT: 25px;
+    BACKGROUND-COLOR: #f2f2f2;
+}
+.CRI-Tbl TH.second-TH{
+    FONT-WEIGHT: normal;
+    WIDTH: 50px;
+}
+.CRI-Tbl TH.second-TH2{
+    FONT-WEIGHT: normal;
+    WIDTH: 55px;
+}
+.CRI-Tbl TH.tag-TH{
+    WIDTH: 180px;
+}
+.CRI-Tbl TH.tag-TH2{
+    WIDTH: 55px;
+}
+.CRI-Tbl TD{
+	BORDER: 0px;
+	BORDER-LEFT: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-COLOR: #bcbcbc;
+	BORDER-STYLE: solid;
+    FONT-SIZE: 100%;
+    FONT-WEIGHT: lighter;
+    HEIGHT: 22px;
+    TEXT-ALIGN: center;
+    VERTICAL-ALIGN: middle;
+}
+.CRI-Tbl TD.index{
+    WIDTH:30px;
+}
+.CRI-Tbl TD.tag-Name{
+    WIDTH:150px;
+}
+.CRI-Tbl TD.tag-TD{
+    WIDTH: 100px;
+}
+.CRI-Tbl TD.ErrorCell{
+    BACKGROUND-COLOR: #FFFF99;
+}
+/*--チェック結果詳（要素ごと）--*/
+#container-Box DIV.contents-CT{
+	MARGIN-LEFT: 15px;
+	MARGIN-BOTTOM: 20px;
+}
+#container-Box DIV.contents-CT.Head{
+	CLEAR:left;
+	MARGIN-LEFT: 15px;
+	MARGIN-BOTTOM: 3px;
+}
+.contents-CT TABLE.che-Tags{
+	WIDTH: 918px;
+	MARGIN-BOTTOM: 20px;
+	FONT-SIZE:120%;
+	BORDER: 1px;
+	BORDER-TOP: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+}
+.contents-CT.Head TABLE.che-Tags{
+	WIDTH: 918px;
+	MARGIN-BOTTOM: 0px;
+	FONT-SIZE:120%;
+	BORDER: 0px;
+}
+.che-Tags TH{
+	HEIGHT: 50px;
+	BORDER: 0px;
+	BORDER-LEFT: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-COLOR: #bcbcbc;
+	BORDER-STYLE: solid;
+	BACKGROUND-COLOR: #f2f2f2;
+	TEXT-ALIGN:center;
+}
+.Head TH{
+	HEIGHT: 50px;
+	PADDING: 0px 5px 0px 5px;
+	BORDER: 0px;
+	BACKGROUND-COLOR: #e0e0e0;
+}
+.che-Tags TH.Tags-Title{
+    VERTICAL-ALIGN: middle;
+    PADDING-LEFT:8px;
+    TEXT-ALIGN:left;
+}
+.che-Tags TD{
+	HEIGHT: 28px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+	FONT-SIZE: 120%;
+	FONT-WEIGHT: lighter;
+	VERTICAL-ALIGN: middle;
+	TEXT-ALIGN: center;
+}
+
+/*--チェック結果詳細（行）--*/
+.che-Tags TD.line-Cell{
+	WIDTH: 50px;
+}
+/*--チェック結果詳細（ソース）--*/
+.che-Tags TD.source-Cell{
+	FONT-SIZE: 110%;
+	WIDTH: 130px;
+	PADDING: 0px 0px 0px 5px;
+	TEXT-ALIGN: left;
+	BORDER-RIGHT: 0px;
+}
+/*--チェック結果詳細（ソース）--*/
+.che-Tags TD.sourceOnly-Cell{
+	FONT-SIZE: 110%;
+	WIDTH: 138px;
+	PADDING: 0px 0px 0px 5px;
+	TEXT-ALIGN: left;
+}
+/*--チェック結果詳細（画面で確認）--*/
+.che-Tags TD.screen-Cell{
+	PADDING-RIGHT:3px;
+	WIDTH: 48px;
+}
+/*--チェック結果詳細（エラー/確認）--*/
+.che-Tags TD.status-Cell{
+	PADDING: 3px 0px 3px 3px;
+	BORDER-RIGHT: 0px;
+    WIDTH: 30px;
+	VERTICAL-ALIGN:top;
+}
+/*--チェック結果詳細（問題点）--*/
+.che-Tags TD.problem-Cell{
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+	PADDING: 3px 3px 3px 3px;
+	MAX-WIDTH: 401px;
+	TEXT-ALIGN: left;
+	VERTICAL-ALIGN:top;
+	FONT-SIZE: 100%;
+}
+/*--チェック結果詳細（達成等級）--*/
+.che-Tags TD.grade-Cell{
+	WIDTH: 59px;
+	VERTICAL-ALIGN:top;
+    PADDING-TOP: 5px;
+}
+/*--チェック結果詳細（達成基準）--*/
+.che-Tags TD.reference-Cell{
+	WIDTH: 88px;
+	VERTICAL-ALIGN:top;
+    PADDING-TOP: 5px;
+}
+/*--チェック結果詳細（実装方法）--*/
+.che-Tags TD.method-Cell{
+	WIDTH: 88px;
+	VERTICAL-ALIGN:top;
+    PADDING-TOP: 5px;
+}
+
+/*--チェック結果詳細(リンク・画像リスト)--*/
+#container-Box DIV.contents-List{
+	MARGIN-LEFT: 15px;
+	MARGIN-BOTTOM: 20px;
+}
+.contents-List TABLE.che-Lists{
+	WIDTH: 918px;
+	MARGIN-BOTTOM: 20px;
+	FONT-SIZE: 120%;
+	BORDER: 1px;
+	BORDER-TOP: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+}
+.che-Lists TH{
+	HEIGHT: 55px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-COLOR: #bcbcbc;
+	BORDER-STYLE: solid;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+.che-Lists TD{
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+	FONT-SIZE: 120%;
+	FONT-WEIGHT: lighter;
+	VERTICAL-ALIGN: middle;
+	TEXT-ALIGN: center;
+}
+/*--チェック結果詳細（行）--*/
+.che-Lists TD.line-Cell{
+	WIDTH: 100px;
+}
+/*--チェック結果詳細（ソース）--*/
+.che-Lists TD.source-Cell{
+	FONT-SIZE: 110%;
+	PADDING: 0px 5px 0px 5px;
+	TEXT-ALIGN: left;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+	MAX-WIDTH: 400px;
+	WIDTH: 400px;
+}
+/*--チェック結果詳細（リンクテキスト・ALT）--*/
+.che-Lists TD.text-Cell{
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+	PADDING: 2px;
+	MAX-WIDTH:400px;
+	WIDTH: 400px;
+	TEXT-ALIGN: left;
+}
+
+/*--ソースリスト--*/
+#container-Box DIV.contents-CS{
+	MARGIN-LEFT: 15px;
+	MARGIN-BOTTOM: 10px;
+}
+.contents-CS TABLE.che-Source{
+	WIDTH: 918px;
+	FONT-SIZE: 100%;
+	BORDER: 1px;
+	BORDER-TOP: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+}
+.che-Source TH{
+	HEIGHT: 25px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-COLOR: #bcbcbc;
+	BORDER-STYLE: solid;
+	BACKGROUND-COLOR: #f2f2f2;
+	FONT-SIZE: 120%;
+}
+.che-Source TD{
+	HEIGHT: 22px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+	FONT-SIZE: 100%;
+	FONT-WEIGHT: lighter;
+	VERTICAL-ALIGN: middle;
+	TEXT-ALIGN: center;
+}
+/*--ソースリスト（行）--*/
+.che-Source TD.line-Cell{
+	WIDTH: 58px;
+	PADDING: 0px 5px 0px 5px;
+	TEXT-ALIGN: left;
+}
+/*--ソースリスト（ソース）--*/
+.che-Source TD.source-Cell{
+    WORD-BREAK: break-all;
+    WORD-WRAP: break-word;
+	WIDTH: 837px;
+	MAX-WIDTH: 837px;
+	PADDING: 0px 5px 0px 5px;
+	TEXT-ALIGN: left;
+}
+/*--チェックした項目--*/
+#container-Box DIV.CL-Box{
+	PADDING-BOTTOM: 10px;
+}
+TABLE.CL-Tbl{
+	FONT-SIZE: 120%;
+	BORDER: 1px;
+	BORDER-TOP: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+	WIDTH: 950px;
+}
+
+.CL-Tbl TH{
+	HEIGHT: 42px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-COLOR: #bcbcbc;
+	BORDER-STYLE: solid;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+.CL-Tbl TH.TblLef{
+	HEIGHT: 31px;
+	WIDTH: 73px;
+}
+.CL-Tbl TH.TblCen{
+	WIDTH: 101px;
+}
+.CL-Tbl TH.TblCout{
+	WIDTH: 100px;
+}
+
+.CL-Tbl TR.CF-Err{
+	BACKGROUND-COLOR: #FFFF99;
+}
+.CL-Tbl TD{
+	HEIGHT: 31px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+	FONT-SIZE:120%;
+	FONT-WEIGHT: lighter;
+	VERTICAL-ALIGN: middle;
+	TEXT-ALIGN: center;
+}
+.CL-Tbl TD.TblRig{
+	PADDING: 0px 5px 0px 5px;
+	TEXT-ALIGN: left;
+	FONT-SIZE:100%;
+}
+
+.CL-Tbl TD.ErrorCell{
+    BACKGROUND-COLOR: #FFFF99;
+}
+
+/*--カーソル--*/
+TD.Cursor{
+    CURSOR: POINTER;
+}
+/*--NOSCRIPTデザイン--*/
+.noscript{
+	FONT-SIZE:1.2EM;
+	COLOR: #FF0000;
+	FONT-WEIGHT: BOLD;
+}
+
+.noscript TD{
+	VERTICAL-ALIGN:TOP;
+}
+
+DIV.nottingList{
+    FONT-SIZE:1.3em;
+    PADDING-LEFT:46px
+}
