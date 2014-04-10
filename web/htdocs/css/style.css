@@ -14,6 +14,7 @@ body {
   background-color: #fff;
   font-size: 0.875em;
   line-height: 1.42857;
+  color: #363636;
 }
 
 a {
@@ -189,13 +190,45 @@ textarea {
 }
 .l-header .top-logo {
   float: left;
-  margin: 36px 0 0 0;
+  margin: 36px 0 0 8px;
 }
 .l-header .l-gnav {
   float: right;
-  margin: 50px 0 0 0;
+  margin: 50px 8px 0 0;
+}
+.l-header .menubtn {
+  display: none;
 }
 
+@media (max-width: 999px) {
+  .l-header {
+    width: 100%;
+  }
+  .l-header .top-logo {
+    float: none;
+    text-align: center;
+    margin: 36px 0 30px 0;
+  }
+  .l-header .l-gnav {
+    float: none;
+    margin: 0;
+  }
+}
+@media (max-width: 750px) {
+  .l-header {
+    position: relative;
+    padding: 0 0 14px;
+  }
+  .l-header .l-gnav {
+    display: none;
+  }
+  .l-header .menubtn {
+    display: block;
+    position: absolute;
+    top: 26px;
+    right: 14px;
+  }
+}
 /**
  * メイン
  * .l-main
@@ -205,40 +238,79 @@ textarea {
 }
 
 .l-mainvisual {
-  width: 1000px;
+  width: 984px;
   margin: 0 auto;
+  padding: 20px 8px 10px;
 }
 
+@media (max-width: 999px) {
+  .l-mainvisual {
+    width: 96%;
+    padding: 20px 2% 10px;
+  }
+}
 .l-available-outer {
   background-color: #e8ebf1;
   border-bottom: 1px #d9d9d9 solid;
 }
 
 .l-available {
-  width: 1000px;
+  width: 984px;
   margin: 0 auto;
+  padding: 40px 8px 30px;
 }
 
+@media (max-width: 999px) {
+  .l-available {
+    width: 100%;
+  }
+}
 .l-contentsbottom-outer {
-  width: 1000px;
+  width: 984px;
   margin: 0 auto 40px;
+  padding: 0 8px;
 }
 
+@media (max-width: 999px) {
+  .l-contentsbottom-outer {
+    width: 96%;
+    padding: 0 2%;
+  }
+}
 /* TESTIMONIALS + OUR CLIENTS */
 .l-contentsbottom-outer02 {
   margin: 0 0 40px 0;
 }
 
+/* TESTIMONIALS */
 .l-2dividel {
   float: left;
-  width: 500px;
+  width: 492px;
 }
 
+/* OUR CLIENTS */
 .l-2divider {
   float: right;
   width: 479px;
 }
 
+@media (max-width: 999px) {
+  .l-2dividel,
+  .l-2divider {
+    float: none;
+    width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  .l-2divider .clients li {
+    width: 100%;
+    margin: 0 0 4px 0;
+    text-align: center;
+  }
+  .l-2divider .clients li img {
+    width: 70%;
+  }
+}
 /**
  * フッター
  * .l-footer
@@ -253,9 +325,17 @@ textarea {
   margin: 40px auto 40px;
 }
 
+@media (max-width: 999px) {
+  .l-footer {
+    width: 96%;
+    margin: 40px 0 0 0;
+    padding: 0 2%;
+  }
+}
 .l-footer-copyright {
-  width: 1000px;
+  width: 984px;
   margin: 0 auto;
+  padding: 0 8px;
 }
 .l-footer-copyright small {
   float: left;
@@ -264,6 +344,18 @@ textarea {
   float: right;
 }
 
+@media (max-width: 999px) {
+  .l-footer-copyright {
+    width: 96%;
+    padding: 0 2%;
+  }
+  .l-footer-copyright small {
+    float: none;
+  }
+  .l-footer-copyright .l-footer-copyright-logo {
+    float: none;
+  }
+}
 /* ==========================================================================
    各種（モジュール）
    ========================================================================== */
@@ -302,6 +394,7 @@ textarea {
 }
 .gnav .gnav-low {
   position: relative;
+  text-align: left;
 }
 .gnav .gnav-low a {
   background-image: url(../img/item-icon10.png);
@@ -339,25 +432,57 @@ textarea {
   border-top: 4px #2aacc8 solid;
 }
 
+@media (max-width: 999px) {
+  .gnav {
+    text-align: center;
+  }
+  .gnav > li {
+    display: inline-block;
+    float: none;
+  }
+}
+@media (max-width: 750px) {
+  .gnav {
+    text-align: left;
+  }
+  .gnav a {
+    padding: 10px 24px 6px 18px;
+  }
+  .gnav li {
+    display: block;
+    margin: 0;
+  }
+  .gnav .gnav-low ul {
+    position: static;
+  }
+}
 /**
  * メインビジュアル
  * .l-mainvisual
  */
-.l-mainvisual {
-  padding: 20px 0 10px;
+#mainvisual-slider a:focus {
+  outline: dotted thin #ff7c5f;
 }
 
+@media (max-width: 999px) {
+  .l-mainvisual img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
 /**
  * サービス
  * .l-availabe
  */
-.l-available {
-  padding: 40px 0 30px;
+@media (max-width: 999px) {
+  .l-available {
+    padding: 20px 0 10px;
+  }
 }
-
 .available-item {
   float: left;
-  width: 230px;
+  width: 226px;
   padding: 0 26px 0 0;
 }
 .available-item .available-item-title {
@@ -374,10 +499,23 @@ textarea {
   padding: 0 0 0 14px;
 }
 
+@media (max-width: 999px) {
+  .available-item {
+    float: none;
+    width: 96%;
+    margin: 0 0 40px 0;
+    padding: 0 2% 0;
+  }
+}
 .available-item-v4 {
   padding: 0;
 }
 
+@media (max-width: 999px) {
+  .available-item-v4 {
+    padding: 0 2% 0;
+  }
+}
 .available-item-v1 .available-item-title {
   background-image: url(../img/item-icon01.png);
 }
@@ -396,12 +534,20 @@ textarea {
  */
 .latestworks {
   margin: 0 0 20px 0;
-  padding: 10px 0 30px 0;
+  padding: 10px 0 20px 0;
   border-bottom: 1px #dfe1e5 solid;
 }
 
 #works-slider {
   position: relative;
+}
+#works-slider img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#works-slider .works-slider-item {
+  margin: 2px;
 }
 #works-slider .owl-controls {
   position: absolute;
@@ -433,16 +579,19 @@ textarea {
   font-size: 1.07143em;
 }
 
+/* LATEST WORKS */
 .contentsbottom-title-v1 {
   background-image: url(../img/item-icon05.png);
   margin: 0 0 20px 0;
   border-bottom: 1px #dfe1e5 solid;
 }
 
+/* TESTIMONIALS */
 .contentsbottom-title-v2 {
   background-image: url(../img/item-icon08.png);
 }
 
+/* OUR CLIENTS */
 .contentsbottom-title-v3 {
   background-image: url(../img/item-icon09.png);
 }
@@ -472,6 +621,19 @@ textarea {
   width: 28%;
 }
 
+@media (max-width: 999px) {
+  .download .download-txt {
+    float: none;
+    width: 96%;
+    margin: 0;
+    padding: 0 2%;
+  }
+  .download .download-btn {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+}
 /**
  * フッター
  * .l-footer
@@ -483,9 +645,14 @@ textarea {
   font-size: 1.07143em;
 }
 
+@media (max-width: 999px) {
+  .footer-item {
+    float: none;
+  }
+}
 .footer-item-v1 {
-  width: 27%;
-  margin: 0 3% 0 0;
+  width: 26%;
+  margin: 0 3% 0 1%;
 }
 
 .footer-item-v2 {
@@ -505,7 +672,7 @@ textarea {
 
 .footer-item-v4 {
   width: 17.2%;
-  margin: 0 2% 0 0;
+  margin: 0 1% 0 0;
 }
 .footer-item-v4 dt {
   font-weight: bold;
@@ -529,10 +696,27 @@ textarea {
   margin: 0 0 10px 0;
 }
 
+@media (max-width: 999px) {
+  .footer-item-v1,
+  .footer-item-v2,
+  .footer-item-v3,
+  .footer-item-v4,
+  .footer-item-v5 {
+    width: 100%;
+    margin: 0 0 40px 0;
+  }
+}
 .l-footer-copyright .l-footer-copyright-logo {
   padding: 0 0 40px;
 }
 
+@media (max-width: 999px) {
+  .l-footer-copyright .l-footer-copyright-logo {
+    display: block;
+    padding: 20px 0 40px;
+    text-align: center;
+  }
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */

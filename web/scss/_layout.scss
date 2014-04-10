@@ -19,15 +19,43 @@
 	padding: 0 0 36px;
 	.top-logo {
 		float: left;
-		margin: 36px 0 0 0;
+		margin: 36px 0 0 8px;
 	}
 	.l-gnav {
 		float: right;
-		margin: 50px 0 0 0;
+		margin: 50px 8px 0 0;
+	}
+	.menubtn {
+		display: none;
 	}
 }
-@media ( max-width: $break-small ) {
+@media ( max-width: $break-midium ) {
 .l-header {
+	width: 100%;
+	.top-logo {
+		float: none;
+		text-align: center;
+		margin: 36px 0 30px 0;
+	}
+	.l-gnav {
+		float: none;
+		margin: 0;
+	}
+}
+}
+@media ( max-width: $break-midiumsmall ) {
+.l-header {
+	position: relative;
+	padding: 0 0 14px;
+	.l-gnav {
+		display: none;
+	}
+	.menubtn {
+		display: block;
+		position: absolute;
+		top: 26px;
+		right: 14px;
+	}
 }
 }
 /**
@@ -38,34 +66,78 @@
 	background-color: #81e4ed;
 }
 .l-mainvisual {
-	width: $width;
+	width: $width - 16px;
 	margin: 0 auto;
+	padding: 20px 8px 10px;
+}
+
+@media ( max-width: $break-midium ) {
+.l-mainvisual {
+	width: 100% - 4%;
+	padding: 20px 2% 10px;
+}
 }
 .l-available-outer {
 	background-color: $bgcolor01;
 	border-bottom: 1px #d9d9d9 solid;
 }
 .l-available {
-	width: $width;
+	width: $width - 16px;
 	margin: 0 auto;
+	padding: 40px 8px 30px;
+}
+@media ( max-width: $break-midium ) {
+.l-available {
+	width: 100%;
+}
 }
 .l-contentsbottom-outer {
-	width: $width;
+	width: $width - 16px;
 	margin: 0 auto 40px;
+	padding: 0 8px;
+}
+@media ( max-width: $break-midium ) {
+.l-contentsbottom-outer {
+	width: 100% - 4%;
+	padding: 0 2%;
+}
 }
 /* TESTIMONIALS + OUR CLIENTS */
 .l-contentsbottom-outer02 {
 	margin: 0 0 40px 0;
 }
+/* TESTIMONIALS */
 .l-2dividel {
 	float: left;
-	width: 500px;
+	width: 492px;
 //	margin: 0 3% 0 0;
 }
+/* OUR CLIENTS */
 .l-2divider {
 	float: right;
 	width: 479px;
-}	
+}
+@media ( max-width: $break-midium ) {
+.l-2dividel,
+.l-2divider {
+	float: none;
+	width: 100%;
+}
+}
+@media ( max-width: $break-small ) {
+.l-2divider {
+	.clients {
+		li {
+			width: 100%;
+			margin: 0 0 4px 0;
+			text-align: center;
+			img {
+				width: 70%;
+			}
+		}
+	}
+}
+}
 /**
  * フッター
  * .l-footer
@@ -78,13 +150,33 @@
 	width: $width;
 	margin: 40px auto 40px;
 }
+@media ( max-width: $break-midium ) {
+.l-footer {
+	width: 100% - 4%;
+	margin: 40px 0 0 0;
+	padding: 0 2%;
+}
+}
 .l-footer-copyright {
-	width: $width;
+	width: $width - 16px;
 	margin: 0 auto;
+	padding: 0 8px;
 	small {
 		float: left;
 	}
 	.l-footer-copyright-logo {
 		float: right;
 	}
+}
+@media ( max-width: $break-midium ) {
+.l-footer-copyright {
+	width: 100% - 4%;
+	padding: 0 2%;
+	small {
+		float: none;
+	}
+	.l-footer-copyright-logo {
+		float: none;
+	}
+}
 }

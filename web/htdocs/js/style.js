@@ -15,7 +15,22 @@ $(function(){
 	});
 });
 
+// グロナビ開閉ボタン
+$(function(){
+	$('p.menubtn').on('click',function(){
+		$('nav.l-gnav').slideToggle('fast');
+		return false;
+	});
+});
+
 // フッター CONNECT WITH US
 $(function(){
-	$("div.footer-item-v5 li:nth-child(3n)").addClass("mr0");
+	var w = $(window).width();
+	var x = 999;
+	if (w <= x) {
+		$("div.footer-item-v5 li:nth-child(3n)").removeClass("mr0");
+	} else {
+		$("div.footer-item-v5 li:nth-child(3n)").addClass("mr0");
+	}
 });
+

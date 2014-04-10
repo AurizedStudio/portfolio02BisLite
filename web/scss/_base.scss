@@ -39,7 +39,9 @@ $color01: #000; // ベースタイトル文字カラー
 $color02: #363636; // ベース文字カラー
 $color03: #2aacc8; // リンクカラー
 $bgcolor01: #e8ebf1; // バックグラウンドカラー
-$break-small: 420px; // ブレイクポイント
+$break-midium: 999px; // ブレイクポイント
+$break-midiumsmall: 750px; // ブレイクポイント
+$break-small: 320px; // ブレイクポイント
 
 html,
 button,
@@ -53,6 +55,7 @@ body {
 	background-color: #fff;
 	font-size: r-size(14,16);
 	line-height: (20 / 14);
+	color: $color02;
 }
 a {
 	color: $color03;

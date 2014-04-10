@@ -12,7 +12,7 @@
 		margin: 0;
 	}
 }
-.gnav {
+.gnav { // ul
 	margin: 0;
 	font-weight: bold;
 	a {
@@ -38,6 +38,7 @@
 	}
 	.gnav-low { // li
 		position: relative;
+		text-align: left;
 		a {
 			background-image: url(../img/item-icon10.png);
 			background-repeat: no-repeat;
@@ -75,23 +76,62 @@
 		}
 	}
 }
+@media ( max-width: $break-midium ) {
+.gnav {
+	text-align: center;
+	> li {
+		display: inline-block;
+		float: none;
+	}
+}
+}
+@media ( max-width: $break-midiumsmall ) {
+.gnav {
+	text-align: left;
+	a {
+		padding: 10px 24px 6px 18px;
+	}
+	li {
+		display: block;
+		margin: 0;
+	}
+	.gnav-low {
+		ul {
+			position: static;
+		}
+	}
+}
+}
 /**
  * メインビジュアル
  * .l-mainvisual
  */
+#mainvisual-slider {
+	a {
+		&:focus {
+			outline: dotted thin #ff7c5f;
+		}
+	}
+}
+@media ( max-width: $break-midium ) {
 .l-mainvisual {
-	padding: 20px 0 10px;
+	img {
+		@include img;
+	}
+}
 }
 /**
  * サービス
  * .l-availabe
  */
+@media ( max-width: $break-midium ) {
 .l-available {
-	padding: 40px 0 30px;
+	padding: 20px 0 10px;
+}
 }
 .available-item {
 	float: left;
-	width: 230px;
+	width: 230px - 4px;
 	padding: 0 26px 0 0;
 	.available-item-title {
 		background-repeat: no-repeat;
@@ -107,8 +147,21 @@
 		padding: 0 0 0 14px;
 	}
 }
+@media ( max-width: $break-midium ) {
+.available-item {
+	float: none;
+	width: 100% - 4%;
+	margin: 0 0 40px 0;
+	padding: 0 2% 0;
+}
+}
 .available-item-v4 {
 	padding: 0;
+}
+@media ( max-width: $break-midium ) {
+.available-item-v4 {
+	padding: 0 2% 0;
+}
 }
 .available-item-title {
 	.available-item-v1 & {
@@ -129,11 +182,22 @@
  */
 .latestworks {
 	margin: 0 0 20px 0;
-	padding: 10px 0 30px 0;
+	padding: 10px 0 20px 0;
 	border-bottom: 1px #dfe1e5 solid;
 }
 #works-slider {
 	position: relative;
+	a {
+		&:focus {
+//			outline: dotted thin #ff7c5f;
+		}
+	}
+	img {
+		@include img;
+	}
+	.works-slider-item {
+		margin: 2px;
+	}
 	.owl-controls {
 		position: absolute;
 		top: -60px;
@@ -163,14 +227,17 @@
 	padding: 16px 0 16px 40px;
 	font-size: r-size(15,14);
 }
+/* LATEST WORKS */
 .contentsbottom-title-v1 {
 	background-image: url(../img/item-icon05.png);
 	margin: 0 0 20px 0;
 	border-bottom: 1px #dfe1e5 solid;
 }
+/* TESTIMONIALS */
 .contentsbottom-title-v2 {
 	background-image: url(../img/item-icon08.png);
 }
+/* OUR CLIENTS */
 .contentsbottom-title-v3 {
 	background-image: url(../img/item-icon09.png);
 }
@@ -198,6 +265,21 @@
 		width: 28%;
 	}
 }
+@media ( max-width: $break-midium ) {
+.download {
+	.download-txt {
+		float: none;
+		width: 100% - 4%;
+		margin: 0;
+		padding: 0 2%;
+	}
+	.download-btn {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+}
+}
 /**
  * フッター
  * .l-footer
@@ -208,9 +290,14 @@
 		font-size: r-size(15,14);
 	}
 }
+@media ( max-width: $break-midium ) {
+.footer-item {
+	float: none;
+}
+}
 .footer-item-v1 {
-	width: 30% - 3%;
-	margin: 0 3% 0 0;
+	width: 30% - 3% - 1%;
+	margin: 0 3% 0 1%;
 }
 .footer-item-v2 {
 	width: 14.8% - 2%;
@@ -228,7 +315,7 @@
 }
 .footer-item-v4 {
 	width: 19.2% - 2%;
-	margin: 0 2% 0 0;
+	margin: 0 1% 0 0;
 	dt {
 		font-weight: bold;
 	}
@@ -250,8 +337,27 @@
 		}
 	}
 }
+@media ( max-width: $break-midium ) {
+.footer-item-v1,
+.footer-item-v2,
+.footer-item-v3,
+.footer-item-v4,
+.footer-item-v5 {
+	width: 100%;
+	margin: 0 0 40px 0;
+}
+}
 .l-footer-copyright {
 	.l-footer-copyright-logo {
 		padding: 0 0 40px;
 	}
+}
+@media ( max-width: $break-midium ) {
+.l-footer-copyright {
+	.l-footer-copyright-logo {
+		display: block;
+		padding: 20px 0 40px;
+		text-align: center;
+	}
+}
 }

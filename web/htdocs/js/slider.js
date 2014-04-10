@@ -4,14 +4,16 @@ $(function(){
 //		navigation: true,
 		slideSpeed: 300,
 //		pagination: false,
-		autoPlay: 7000,
+		autoPlay: 14000,
 		singleItem: true
 	});
 });
 $(function(){
 	$("#works-slider").owlCarousel({
-		autoPlay: 3000,
+		autoPlay: 14000,
 		items: 4,
+		itemsTablet: [999,4],
+		itemsTabletSmall: [800,3],
 		navigation: true,
 		pagination: false
 //		itemsDesktop: [1000,4] // if(window<=1000){show 4 slider per page}
