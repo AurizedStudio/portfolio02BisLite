@@ -39,14 +39,13 @@
 <!-- TemplateEndEditable -->
 <!-- TemplateParam name="ciTopH1" type="boolean" value="true" -->
 <!-- TemplateParam name="ciLowH1" type="boolean" value="false" -->
-</head>
-<body>
+<!-- TemplateParam name="bodyClass" type="text" value="top" --></head>
+<body class="@@(bodyClass)@@">
 <p class="blockskip"><a href="#contents-start">Skip to CONTENTS</a></p>
 <div class="l-header-outer">
 	<header class="l-header"><!-- TemplateBeginIf cond="ciTopH1" -->
 		<h1 class="top-logo cilogo"><a href="./"><img src="../htdocs/img/h1-logo.png" alt="BisLite" width="148" height="38"></a></h1>
-	<!-- TemplateEndIf --><!-- TemplateBeginIf cond="ciLowH1" --><p class="top-logo cilogo"><a href="./"><img src="../htdocs/img/h1-logo.png" alt="BisLite" width="148" height="38"></a></p>
-	<!-- TemplateEndIf -->
+	<!-- TemplateEndIf --><!-- TemplateBeginIf cond="ciLowH1" --><p class="top-logo cilogo"><a href="./"><img src="../htdocs/img/h1-logo.png" alt="BisLite" width="148" height="38"></a></p><!-- TemplateEndIf -->
 	<p class="menubtn"><a href="#"><img src="../htdocs/img/item-icon12.png" alt="メニューボタン" width="30" height="30"></a></p>
 		<nav class="l-gnav">
 			<h2 class="visuallyhidden">global navigation</h2>
@@ -64,12 +63,12 @@
 				</li>
 				<li><a href="#">PORTFOLIO</a></li>
 				<li><a href="#">BLOG</a></li>
-				<li><a href="#">CONTACT US</a></li>
+				<li><a href="../htdocs/contact.html">CONTACT US</a></li>
 			</ul>
 		</nav>
 	</header>
 	<!-- / .l-header-outer --></div>
-<div id="contents-start"><!-- TemplateBeginEditable name="contents" -->
+<div id="contents-start" class="l-contents"><!-- TemplateBeginEditable name="contents" -->
 <div class="l-mainvisual-outer">
 	<section class="l-mainvisual">
 		<h2 class="visuallyhidden">Main Visual</h2>
