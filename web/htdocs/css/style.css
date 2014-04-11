@@ -53,6 +53,10 @@ a:active {
   text-align: center;
 }
 
+.m0 {
+  margin: 0 !important;
+}
+
 .ml10 {
   margin-left: 10px !important;
 }
@@ -309,6 +313,43 @@ textarea {
   }
   .l-2divider .clients li img {
     width: 70%;
+  }
+}
+/* 下層ページ コンテンツ */
+.low .l-contents {
+  width: 984px;
+  margin: 0 auto;
+  padding: 20px 8px 40px;
+}
+
+@media (max-width: 999px) {
+  .low .l-contents {
+    width: 96%;
+    padding: 20px 2% 40px;
+  }
+}
+.l-main {
+  float: left;
+  width: 58%;
+  padding: 0 2% 0 0;
+}
+
+.l-side {
+  float: right;
+  width: 40%;
+}
+
+@media (max-width: 750px) {
+  .l-main {
+    float: none;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 40px 0;
+  }
+
+  .l-side {
+    float: none;
+    width: 100%;
   }
 }
 /**
@@ -635,6 +676,74 @@ textarea {
   }
 }
 /**
+ * 下層ページ コンテンツ
+ */
+.pagetitle {
+  background-repeat: no-repeat;
+  background-position: left center;
+  margin: 0 0 20px 0;
+  padding: 10px 0 10px 40px;
+  font-size: 1.07143em;
+  border-bottom: 1px #dfe1e5 solid;
+}
+
+.pagetitle-v1 {
+  background-image: url(../img/item-icon13.png);
+}
+
+.contactform .contactform-title {
+  margin: 0 0 .5em 0;
+}
+.contactform .contactform-input {
+  margin: 0 0 1em 0;
+}
+.contactform .contactform-input input {
+  width: 80%;
+  padding: .5em;
+}
+.contactform .contactform-input textarea {
+  width: 80.5%;
+  height: 10em;
+  padding: .5em;
+}
+.contactform .contactform-submit input {
+  margin: 0 0 0 -2px;
+}
+
+@media (max-width: 999px) {
+  .contactform .contactform-input input,
+  .contactform .contactform-input textarea {
+    font-size: 1.14286em;
+  }
+}
+@media (max-width: 750px) {
+  .contactform .contactform-input input {
+    width: 96.5%;
+    padding: 1%;
+  }
+  .contactform .contactform-input textarea {
+    width: 95%;
+    padding: 2%;
+  }
+}
+.map {
+  margin: 0 0 40px 0;
+}
+.map .map-inner {
+  width: 100%;
+  height: 300px;
+}
+
+@media (max-width: 750px) {
+  .map .map-inner {
+    height: 200px;
+  }
+}
+.officeadd dt {
+  font-weight: bold;
+}
+
+/**
  * フッター
  * .l-footer
  */
@@ -848,7 +957,9 @@ textarea {
 .footer-item-v5:before,
 .footer-item-v5:after,
 .l-footer-copyright:before,
-.l-footer-copyright:after {
+.l-footer-copyright:after,
+.low .l-contents:before,
+.low .l-contents:after {
   content: " ";
   /* 1 */
   display: table;
@@ -862,7 +973,8 @@ textarea {
 .download:after,
 .l-footer:after,
 .footer-item-v5:after,
-.l-footer-copyright:after {
+.l-footer-copyright:after,
+.low .l-contents:after {
   clear: both;
 }
 .ie6 .clearfix, .ie7 .clearfix, .ie6
@@ -881,7 +993,9 @@ textarea {
 .footer-item-v5, .ie7
 .footer-item-v5, .ie6
 .l-footer-copyright, .ie7
-.l-footer-copyright {
+.l-footer-copyright, .ie6
+.low .l-contents, .ie7
+.low .l-contents {
   /* For IE 6/7 only Include this rule to trigger hasLayout and contain floats. */
   zoom: 1;
 }

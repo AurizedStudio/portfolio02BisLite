@@ -138,6 +138,44 @@
 	}
 }
 }
+/* 下層ページ コンテンツ */
+.l-contents {
+	.low & {
+		width: $width - 16px;
+		margin: 0 auto;
+		padding: 20px 8px 40px;
+	}
+}
+@media ( max-width: $break-midium ) {
+.l-contents {
+	.low & {
+		width: 100% - 4%;
+		padding: 20px 2% 40px;
+	}
+}
+}
+.l-main {
+	float: left;
+	width: 60% - 2%;
+	padding: 0 2% 0 0;
+}
+.l-side {
+	float: right;
+	width: 40%;
+}
+@media ( max-width: $break-midiumsmall ) {
+.l-main {
+	float: none;
+	width: 100%;
+	padding: 0;
+	margin: 0 0 40px 0;
+}
+.l-side {
+	float: none;
+	width: 100%;
+}
+}
+
 /**
  * フッター
  * .l-footer

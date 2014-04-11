@@ -118,7 +118,8 @@
 .download,
 .l-footer,
 .footer-item-v5,
-.l-footer-copyright {
+.l-footer-copyright,
+.low .l-contents {
 	&:before, &:after {
 		content: " "; /* 1 */
 		display: table; /* 2 */

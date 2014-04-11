@@ -281,6 +281,85 @@
 }
 }
 /**
+ * 下層ページ コンテンツ
+ */
+.pagetitle {
+	background-repeat: no-repeat;
+	background-position: left center;
+	margin: 0 0 20px 0;
+	padding: 10px 0 10px 40px;
+	font-size: r-size(15,14);
+	border-bottom: 1px #dfe1e5 solid;
+}
+.pagetitle-v1 {
+	background-image: url(../img/item-icon13.png);
+}
+.contactform {
+	.contactform-title {
+		margin: 0 0 .5em 0;
+	}
+	.contactform-input {
+		margin: 0 0 1em 0;
+		input {
+			width: 80%;
+			padding: .5em;
+		}
+		textarea {
+			width: 80.5%;
+			height: 10em;
+			padding: .5em;
+		}
+	}
+	.contactform-submit {
+		input {
+			margin: 0 0 0 -2px;
+		}
+	}
+}
+@media ( max-width: $break-midium ) {
+.contactform {
+	.contactform-input {
+		input,
+		textarea {
+			font-size: r-size(16,14);
+		}
+	}
+}
+}
+@media ( max-width: $break-midiumsmall ) {
+.contactform {
+	.contactform-input {
+		input {
+			width: 98.5% - 2%;
+			padding: 1%;
+		}
+		textarea {
+			width: 99% - 4%;
+			padding: 2%;
+		}
+	}
+}
+}
+.map {
+	margin: 0 0 40px 0;
+	.map-inner {
+		width: 100%;
+		height: 300px;
+	}
+}
+@media ( max-width: $break-midiumsmall ) {
+.map {
+	.map-inner {
+		height: 200px;
+	}
+}
+}
+.officeadd {
+	dt {
+		font-weight: bold;
+	}
+}
+/**
  * フッター
  * .l-footer
  */
