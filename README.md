@@ -1,6 +1,6 @@
 # Coding portfolio02
 
-This is RWD pages. (TOP page + CONTACT UP page)  
+This is RWD pages. (TOP page + CONTACT US page)  
 I'll add 1 more page.
 
 ## Design
