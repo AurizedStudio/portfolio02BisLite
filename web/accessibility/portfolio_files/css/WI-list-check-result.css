@@ -1,0 +1,1324 @@
+﻿/*@charset "UTF-8";*/
+/*WebInspectorチェック結果画面CSS*/
+/* 全体
+-----------------------------------------------------------*/
+BODY {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	FONT-SIZE: small;
+	BACKGROUND: #FFF;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	COLOR: #000000;
+	LINE-HEIGHT: 1.4em;
+	PADDING-TOP: 0px;
+	FONT-FAMILY:"MS PGothic";
+}
+DIV {
+	FONT-SIZE: 100%;
+}
+P {
+	FONT-SIZE: 100%;
+}
+SPAN {
+	FONT-SIZE: 100%;
+}
+A {
+	FONT-SIZE: 100%;
+}
+
+UL {
+	FONT-SIZE: 100%;
+	LIST-STYLE-TYPE: none;
+	PADDING: 0px;
+	MARGIN: 0px;
+}
+LI {
+	FONT-SIZE: 100%;
+	PADDING: 0px;
+	MARGIN: 0px;
+}
+/* リンクテキスト装飾
+-------------------------------------------------------*/
+A:link {
+	COLOR: #003399;
+	TEXT-DECORATION: underline;
+}
+ A:visited {
+	COLOR: #660099;
+	TEXT-DECORATION: underline;
+}
+IMG {
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	BORDER-RIGHT-WIDTH: 0px;
+}
+A {
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	BORDER-RIGHT-WIDTH: 0px;
+}
+
+/* 項目スタイル
+----------------------------------------------*/
+/* --アクセシビリティチェック結果-- */
+H1 {
+	FONT-SIZE: 160%;
+	MARGIN-TOP:13px;
+	MARGIN-BOTTOM:13px;
+}
+/* --１階層目-- */
+H2 {
+    MARGIN-TOP:0px;
+	FONT-SIZE: 160%;
+	TEXT-INDENT: 30px;
+	line-height: 130%;
+	BACKGROUND-IMAGE: url(../images/main-list.gif);
+	BACKGROUND-REPEAT: no-repeat;
+	BACKGROUND-POSITION: left center;
+
+}
+/* --２階層目-- */
+H3 {
+	MARGIN: 0px;
+	FONT-SIZE: 160%;
+	TEXT-INDENT: 30px;
+	LINE-HEIGHT: 130%;
+	BACKGROUND-IMAGE: url(../images/main-list.gif);
+	BACKGROUND-REPEAT: no-repeat;
+	BACKGROUND-POSITION: left center;
+	FLOAT: LEFT;
+
+}
+H4 {
+	MARGIN: 0px;
+	FONT-SIZE: 160%;
+	TEXT-INDENT: 36px;
+	LINE-HEIGHT: 130%;
+	BACKGROUND-IMAGE: url(../images/inner-list.gif);
+	BACKGROUND-REPEAT: no-repeat;
+	BACKGROUND-POSITION: left center;
+	WHITE-SPACE:pre;
+	MARGIN-BOTTOM:10px;
+
+}
+H5 {
+	MARGIN: 0px;
+	FONT-SIZE: 110%;
+	FONT-WEIGHT: lighter;
+}
+/*-- header --*/
+DIV#headerBox{
+	WIDTH: 950px;
+	HEIGHT: 115px;
+	BACKGROUND-IMAGE: url(../images/title-back_List.gif);
+	BACKGROUND-REPEAT: no-repeat;
+	MARGIN: 0px auto 10px auto;
+}
+#headerBox DIV.title_Logo{
+	WIDTH: 60px;
+	HEIGHT: 56px;
+	PADDING: 10px 0px 10px 15px;
+	FLOAT:left;
+}
+#headerBox DIV.title_Text{
+	WIDTH: 875px;
+	HEIGHT: 56px;
+	PADDING: 0px 0px 10px 0px;
+	LINE-HEIGHT: 3em;
+	FLOAT:left;
+}
+
+#headerBox DIV.title_Text H1{
+	LINE-HEIGHT: 3.5em;
+	DISPLAY: inline;
+
+}
+
+#headerBox Div.title_Text P{
+	LINE-HEIGHT: 1.3em;
+	PADDING-RIGHT: 10px;
+	FONT-SIZE: 160%;
+	FONT-WEIGHT: bold;
+	FLOAT: right;
+}
+*:first-child+html #headerBox DIV.title_Text{
+	HEIGHT: 76px;
+	FLOAT: left;
+	LINE-HEIGHT:5em;
+	WIDTH: 875px;
+}
+#headerBox DIV.time_Box{
+	PADDING-RIGHT: 10px;
+	TEXT-ALIGN: RIGHT;
+	LINE-HEIGHT: 3em;
+	CLEAR: both;
+}
+
+P.time_Box_Comment{
+	FONT-SIZE: 105%;
+}
+
+/*-- footer --*/
+DIV#footerBox{
+	WIDTH: 950px;
+	HEIGHT: auto;
+	BACKGROUND-COLOR: #595959;
+	MARGIN: 15px auto 10px auto;
+
+	PADDING-RIGHT: 5px;
+	TEXT-ALIGN: right;
+
+}
+#footerBox SPAN{
+	COLOR: #FFFFFF;
+	FONT-SIZE: 90%;
+}
+/*-- containerbox --*/
+DIV#container-Box{
+	WIDTH: 950px;
+	MARGIN: 0px auto 0px auto;
+}
+/*--大見出し--*/
+#container-Box DIV.sentence-Fir{
+	HEIGHT: 27px;
+	MARGIN-TOP: 10px;
+	MARGIN-BOTTOM: 20px;
+}
+/*--中見出し--*/
+#container-Box DIV.sentence-Sec{
+	BACKGROUND-COLOR: #dddddd;
+	PADDING:8px 15px 8px 15px;
+	MARGIN-BOTTOM: 10px;
+	BORDER-TOP: 0px;
+	BORDER-LEFT: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-BOTTOM: 1px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+}
+.sentence-Sec SPAN {
+	FONT-SIZE:160%;
+    FONT-WEIGHT: bold;
+}
+
+/*--小見出し--*/
+#container-Box DIV.sentence-Thi{
+	MARGIN-LEFT: 15px;
+}
+
+/*--スコア説明 注意書き--*/
+TABLE.Sentence-score{
+    MARGIN-LEFT: 35px;
+    BORDER-RIGHT-width: 0px;
+    MARGIN-RIGHT: 0px;
+    WIDTH: 370px;
+    FONT-SIZE: 100%;
+}
+
+TD.Sentence{
+    VERTICAL-ALIGN: top;
+    PADDING-TOP: 2px;
+    WIDTH: 70px;
+}
+
+/*--ページナビ(このチェック結果の先頭へ,ページの先頭へ,要素・プロパティリストへ)--*/
+#container-Box DIV.page-nav{
+	HEIGHT: 20px;
+	MARGIN-BOTTOM: 10px;
+	TEXT-ALIGN: right;
+	CLEAR: both;
+}
+
+DIV.to_Pagehead{
+	FONT-SIZE:110%;
+	FLOAT:right;
+	MARGIN-RIGHT:13px;
+}
+
+DIV.to_Pagehead A IMG{
+        MARGIN-LEFT: 4px;
+        MARGIN-BOTTOM: -3px;
+}
+
+hr.line-Style {
+	WIDTH: 920px;
+	PADDING: 0px;
+	MARGIN-BOTTOM: 20px;
+	BORDER: 0px none;
+	HEIGHT: 1px;
+	BACKGROUND-IMAGE: url(../images/line.gif);
+}
+
+/*--スコア--*/
+#container-Box DIV.score-Box{
+	PADDING: 10px 0px 15px 0px;
+}
+DIV.contents-Score-Lef{
+	MARGIN: 0px;
+	WIDTH: 950px;
+	FLOAT: left;
+}
+
+/*--一括チェック用チェック結果スコア表--*/
+TABLE.list-check-Result{
+	FLOAT: left;
+	WIDTH: 530px;
+	MAX-WIDTH: 530px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	BORDER-COLLAPSE: collapse;
+}
+
+/*--一括チェック用チェック結果スコア表見出し(スコア)--*/
+TH.list-check-Result-Header{
+	WIDTH: 100px;
+	MAX-WIDTH: 100px;
+        HEIGHT: 22px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+
+/*--一括チェック用チェック結果スコア表見出し(チェック対象)--*/
+TH.list-check-Result-ChechTarget{
+	WIDTH: 422px;
+	MAX-WIDTH: 422px;
+        HEIGHT: 22px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+
+/*--一括チェック用チェック結果スコア表(点数)--*/
+/*--スコア100点--*/
+TD.score-Rig-5{
+	WIDTH: 100px;
+	MAX-WIDTH: 100px;
+	HEIGHT: 99px;
+	BACKGROUND-COLOR: #00b050;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR: #bcbcbc;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+}
+
+/*--スコア～75点--*/
+TD.score-Rig-4{
+	WIDTH: 100px;
+	MAX-WIDTH: 100px;
+	HEIGHT: 99px;
+	BACKGROUND-COLOR: #92d050;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR: #bcbcbc;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+}
+
+/*--スコア～50点--*/
+TD.score-Rig-3{
+	WIDTH: 100px;
+	MAX-WIDTH: 100px;
+	HEIGHT: 99px;
+	BACKGROUND-COLOR: #ffff00;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR: #bcbcbc;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+}
+
+/*--スコア～25点--*/
+TD.score-Rig-2{
+	WIDTH: 100px;
+	MAX-WIDTH: 100px;
+	HEIGHT: 99px;
+	BACKGROUND-COLOR: #ffc000;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR: #bcbcbc;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+}
+
+/*--スコア～0点--*/
+TD.score-Rig-1{
+	WIDTH: 100px;
+	MAX-WIDTH: 100px;
+	HEIGHT: 99px;
+	BACKGROUND-COLOR: #fa9137;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR: #bcbcbc;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+}
+
+/*--一括チェック用チェック結果スコア表(チェック対象)--*/
+TD.check-List-File{
+	WIDTH: 432px;
+	MAX-WIDTH: 432px;
+        HEIGHT: 38px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR: #bcbcbc;
+	TEXT-ALIGN: left;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+        PADDING: 5px;
+}
+IMG.check-Target-Image{
+	VERTICAL-ALIGN: text-bottom;
+        MARGIN-RIGHT: 5px;
+}
+
+/*--一括チェック用チェック結果スコア表--*/
+TH.check-Caption{
+	WIDTH: 140px;
+	MAX-WIDTH: 140px;
+        HEIGHT: 22px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR: #bcbcbc;
+	TEXT-ALIGN: center;
+	FONT-WEIGHT: bold;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+
+/*--一括チェック用チェック結果スコア表(チェック件数表示部)--*/
+TD.Check-Number{
+	WIDTH: 140px;
+	MAX-WIDTH: 140px;
+        HEIGHT: 38px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR: #bcbcbc;
+	TEXT-ALIGN: center;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--一括チェック用チェック結果スコア説明--*/
+TABLE.score-Experiment{
+	WIDTH: 410px;
+	FLOAT: right;
+}
+
+/*--スコア説明--*/
+DIV.contents-Score-Rig{
+	WIDTH: 410px;
+	FLOAT: right;
+	MARGIN: 0px;
+}
+.contents-Score-Rig UL {
+	FONT-SIZE: 110%;
+	LIST-STYLE-TYPE: none;
+	PADDING: 0px;
+	MARGIN: 0px;
+	CLEAR:both;
+}
+.contents-Score-Rig LI {
+	WIDTH: 48px;
+	HEIGHT: 22px;
+	PADDING: 6px 10px 0px 10px;
+	FLOAT: left;
+	BORDER: 0px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+}
+.contents-Score-Rig LI.High{
+	WIDTH: 10px;
+	TEXT-ALIGN: right;
+}
+.contents-Score-Rig LI.Low {
+	WIDTH: 10px;
+	TEXT-ALIGN: left;
+}
+/*--スコア100点--*/
+.contents-Score-Rig LI.score-Rig-5{
+	BORDER: 1px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+	TEXT-ALIGN: left;
+	BACKGROUND-COLOR:#00b050;
+	TEXT-ALIGN:center;
+}
+/*--スコア～75点--*/
+.contents-Score-Rig LI.score-Rig-4{
+	BORDER: 1px;
+	BORDER-LEFT: 0px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR:#92d050;
+	TEXT-ALIGN:center;
+}
+/*--スコア～50点--*/
+.contents-Score-Rig LI.score-Rig-3{
+	BORDER: 1px;
+	BORDER-LEFT: 0px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR:#ffff00;
+	TEXT-ALIGN:center;
+}
+/*--スコア～25点--*/
+.contents-Score-Rig LI.score-Rig-2{
+	BORDER: 1px;
+	BORDER-LEFT: 0px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR:#ffc000;
+	TEXT-ALIGN:center;
+}
+/*--スコア～0点--*/
+.contents-Score-Rig LI.score-Rig-1{
+	BORDER: 1px;
+	BORDER-LEFT: 0px;
+	BORDER-STYLE:solid;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR:#fa9137;
+	TEXT-ALIGN:center;
+}
+
+/*--一括チェック結果サマリ表--*/
+/*--共通部分--*/
+
+/*--一括チェック結果テーブル--*/
+TABLE.summary-Result{
+	FLOAT: left;
+	WIDTH: 950px;
+	MAX-WIDTH: 950px;
+	MARGIN: 0px 0px 20px 0px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	BORDER-COLLAPSE: collapse;
+}
+
+/*--セレクト要素--*/
+SELECT{
+	WIDTH: 82px;
+	MAX-WIDTH: 82px;
+	TEXT-ALIGN: left;
+}
+
+/*--見出し(ファイルNo)--*/
+TH.summary-Result-No{
+	WIDTH: 38px;
+	MAX-WIDTH: 38px;
+	BORDER-STYLE: solid;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+
+/*--見出し(コンテンツ)--*/
+TH.summary-Result-Content{
+	WIDTH: 189px;
+	MAX-WIDTH: 189px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+
+/*--見出し(コンテンツ 詳細結果表示なし)--*/
+TH.summary-Result-Content-NoDetail{
+	WIDTH: 224px;
+	MAX-WIDTH: 224px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+
+/*--見出し(詳細結果)--*/
+TH.summary-Result-Detail{
+	WIDTH: 35px;
+	MAX-WIDTH: 35px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR:#bcbcbc;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+
+/*--見出し(スコア)--*/
+TH.summary-Result-Score{
+	WIDTH: 50px;
+	MAX-WIDTH: 50px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+
+/*--見出し(問題数)--*/
+TH.summary-Result-Problem{
+	WIDTH: 130px;
+	MAX-WIDTH: 130px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+
+/*--見出し(エラー・確認)--*/
+TH.summary-Result-Problem-Info{
+	WIDTH: 65px;
+	MAX-WIDTH: 65px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+
+/*--見出し(チェック結果)--*/
+TH.summary-Result-Cell{
+	WIDTH: 490px;
+	MAX-WIDTH: 490px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+
+/*--共通部分終了--*/
+
+/*--見出し(チェック結果)--*/
+/*--要素及び達成基準--*/
+
+/*--見出し(セレクタ)--*/
+TH.summary-Result-SelectCell{
+	WIDTH: 96px;
+	MAX-WIDTH: 96px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+
+/*--見出し(セレクタ 達成等級)--*/
+TH.summary-Result-SelectCell-LEVEL{
+	WIDTH: 163px;
+	MAX-WIDTH: 164px;
+	MIN-WIDTH: 163px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR: #bcbcbc;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+
+/*--ファイルNo--*/
+TD.Number-Cell{
+	WIDTH: 38px;
+	MAX-WIDTH: 38px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	TEXT-ALIGN: center;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--コンテンツ情報--*/
+TD.content-Name{
+	WIDTH: 189px;
+	MAX-WIDTH: 189px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+	PADDING: 2px 2px 2px 2px;
+}
+
+/*--コンテンツ情報(詳細結果表示なし)--*/
+TD.content-Name-NoDetail{
+	WIDTH: 224px;
+	MAX-WIDTH: 224px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+	PADDING: 2px 2px 2px 2px;
+}
+
+/*--詳細結果--*/
+TD.detail-Img{
+	WIDTH: 35px;
+	MAX-WIDTH: 35px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR:#bcbcbc;
+	TEXT-ALIGN: center;
+}
+
+/*--詳細結果(エラー)--*/
+TD.detail-Img-Error{
+	WIDTH: 710px;
+	MAX-WIDTH: 710px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR:#bcbcbc;
+	TEXT-ALIGN: center;
+}
+
+/*--詳細結果(エラー、詳細結果表示なし)--*/
+TD.detail-Img-Error-NoDetail{
+	WIDTH: 674px;
+	MAX-WIDTH: 674px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR:#bcbcbc;
+	TEXT-ALIGN: center;
+}
+
+/*--詳細結果リンク画像--*/
+IMG.detail-Result-Link{
+	VERTICAL-ALIGN: middle;
+}
+
+/*--スコア--*/
+TD.score-Cell{
+	WIDTH: 50px;
+	MAX-WIDTH: 50px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	TEXT-ALIGN: center;
+	PADDING: 2px 0px 2px 0px;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--スコア(エラー)--*/
+TD.score-Cell-Error{
+	WIDTH: 715px;
+	MAX-WIDTH: 715px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	TEXT-ALIGN: center;
+	PADDING: 2px 0px 2px 0px;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--スコア配色(100点)--*/
+.result-Table-Score-Rig5{
+	BACKGROUND-COLOR:#00b050;
+}
+
+/*--スコア配色(～75点)--*/
+.result-Table-Score-Rig4{
+	BACKGROUND-COLOR:#92d050;
+}
+
+/*--スコア配色(50点)--*/
+.result-Table-Score-Rig3{
+	BACKGROUND-COLOR:#ffff00
+}
+
+/*--スコア配色(25点)--*/
+.result-Table-Score-Rig2{
+	BACKGROUND-COLOR:#ffc000;
+}
+
+/*--スコア配色(0点)--*/
+.result-Table-Score-Rig1{
+	BACKGROUND-COLOR:#fa9137;
+}
+
+/*--スコア配色(エラー)--*/
+.result-Table-Score-RigError{
+	BACKGROUND-COLOR: #FFB5DA;
+}
+
+/*--問題数(エラー・確認)--*/
+TD.problem-Cells-NotZero{
+	WIDTH: 65px;
+	MAX-WIDTH: 65px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	PADDING: 2px 0px 2px 0px;
+	BACKGROUND-COLOR: #FFFF99;
+	TEXT-ALIGN:center;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--問題数(エラー・確認 問題数0)--*/
+TD.problem-Cells-Zero{
+	WIDTH: 65px;
+	MAX-WIDTH: 65px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #FFFFFF;
+	PADDING: 2px 0px 2px 0px;
+	TEXT-ALIGN: center;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--チェック結果セレクト--*/
+TD.check-Result-Problem{
+	WIDTH: 96px;
+	MAX-WIDTH: 96px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #FFFF99;
+	PADDING: 2px 0px 2px 0px;
+	TEXT-ALIGN:center;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--チェック結果セレクト(達成等級)--*/
+TD.check-Result-Problem-LEVEL{
+	WIDTH: 163px;
+	MAX-WIDTH: 164px;
+	MIN-WIDTH: 163px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-STYLE: solid;
+	TEXT-ALIGN: center;
+	BORDER-WIDTH: 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR: #bcbcbc;
+	BACKGROUND-COLOR: #FFFF99;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--チェック結果セレクト(問題数0)--*/
+TD.check-Result-NotProblem{
+	WIDTH: 96px;
+	MAX-WIDTH: 96px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #FFFFFF;
+	PADDING: 2px 0px 2px 0px;
+	TEXT-ALIGN:center;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--チェック結果セレクト(指摘要素無)--*/
+TD.check-Result-ProblemNothing{
+	WIDTH: 490px;
+	MAX-WIDTH: 490px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #FFFFFF;
+	PADDING: 2px 0px 2px 0px;
+	TEXT-ALIGN:center;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--チェック結果セレクト(達成等級 問題数0)--*/
+TD.check-Result-NotProblem-LEVEL{
+	WIDTH: 163px;
+	MAX-WIDTH: 164px;
+	MIN-WIDTH: 163px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-STYLE: solid;
+	TEXT-ALIGN: center;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR: #bcbcbc;
+	BACKGROUND-COLOR: #FFFFFF;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--フッター--*/
+TFOOT{
+	WIDTH: 950px;
+	MAX-WIDTH: 950px;
+	TEXT-ALIGN: center;
+}
+
+/*--見出し(合計)--*/
+TFOOT * TD.sum-Caption{
+	WIDTH: 321px;
+	MAX-WIDTH: 321px;
+	FONT-WEIGHT: bold;
+	BORDER-STYLE: double solid solid solid;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-WIDTH: 4px 1px 1px 1px;
+	BORDER-COLOR: #bcbcbc;
+	BACKGROUND-COLOR: #f2f2f2;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--見出し(平均)--*/
+TFOOT * TD.average-Caption{
+	WIDTH: 321px;
+	MAX-WIDTH: 321px;
+	FONT-WEIGHT: bold;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR: #bcbcbc;
+	BACKGROUND-COLOR: #f2f2f2;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--合計--*/
+TFOOT * TD.sum-Cell-Error-NotZero{
+	WIDTH: 65px;
+	MAX-WIDTH: 65px;
+	BORDER-STYLE: double solid solid solid;
+	BORDER-WIDTH: 4px 1px 1px 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #FFFF99;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--合計(0件)--*/
+TFOOT * TD.sum-Cell-Error-Zero{
+	WIDTH: 65px;
+	MAX-WIDTH: 65px;
+	BORDER-STYLE: double solid solid solid;
+	BORDER-WIDTH: 4px 1px 1px 1px;
+	BORDER-COLOR:#bcbcbc;
+	PADDING: 2px 0px 2px 0px;
+	BACKGROUND-COLOR: #FFFFFF;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--平均--*/
+TFOOT * TD.average-Cell-Error-NotZero{
+	WIDTH: 65px;
+	MAX-WIDTH: 65px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #FFFF99;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--平均(0件)--*/
+TFOOT * TD.average-Cell-Error-Zero{
+	WIDTH: 65px;
+	MAX-WIDTH: 65px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #FFFFFF;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--合計(セレクタ)--*/
+TFOOT * TD.select-Cell-Sum-NotZero{
+	WIDTH: 96px;
+	MAX-WIDTH: 96px;
+	BORDER-STYLE: double solid solid solid;
+	BORDER-WIDTH: 4px 1px 1px 1px;
+	BORDER-COLOR:#bcbcbc;
+	PADDING: 2px 0px 2px 0px;
+	BACKGROUND-COLOR: #FFFF99;
+	TEXT-ALIGN:center;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--合計(セレクタ 達成等級)--*/
+TFOOT * TD.select-Cell-Sum-NotZero-LEVEL{
+	WIDTH: 163px;
+	MAX-WIDTH: 164px;
+	MIN-WIDTH: 163px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-STYLE: double solid solid solid;
+	BORDER-WIDTH: 4px 1px 1px 1px;
+	BORDER-COLOR: #bcbcbc;
+	PADDING: 2px 0px 2px 0px;
+	BACKGROUND-COLOR: #FFFF99;
+	TEXT-ALIGN:center;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--合計(セレクタ 問題数0件)--*/
+TFOOT * TD.upper-Cell-Zero{
+	WIDTH: 96px;
+	MAX-WIDTH: 96px;
+	BORDER-STYLE: double solid solid solid;
+	BORDER-WIDTH: 4px 1px 1px 1px;
+	BORDER-COLOR:#bcbcbc;
+	PADDING: 2px 0px 2px 0px;
+	BACKGROUND-COLOR: #FFFFFF;
+	TEXT-ALIGN:center;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--合計(セレクタ 指摘無)--*/
+TFOOT * TD.upper-Cell-AllZero{
+	WIDTH: 490px;
+	MAX-WIDTH: 490px;
+	BORDER-STYLE: double solid solid solid;
+	BORDER-WIDTH: 4px 1px 1px 1px;
+	BORDER-COLOR:#bcbcbc;
+	PADDING: 2px 0px 2px 0px;
+	BACKGROUND-COLOR: #FFFFFF;
+	TEXT-ALIGN:center;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--合計(セレクタ 問題数0件 達成等級)--*/
+TFOOT * TD.select-Cell-Sum-Zero-LEVEL{
+	WIDTH: 163px;
+	MAX-WIDTH: 164px;
+	MIN-WIDTH: 163px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-STYLE: double solid solid solid;
+	BORDER-WIDTH: 4px 1px 1px 1px;
+	BORDER-COLOR: #bcbcbc;
+	PADDING: 2px 0px 2px 0px;
+	BACKGROUND-COLOR: #FFFFFF;
+	TEXT-ALIGN:center;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--平均(セレクタ)--*/
+TFOOT * TD.select-Cell-Average-NotZero{
+	WIDTH: 96px;
+	MAX-WIDTH: 96px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	PADDING: 2px 0px 2px 0px;
+	BACKGROUND-COLOR: #FFFF99;
+	TEXT-ALIGN:center;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--平均(セレクタ 達成等級)--*/
+TFOOT * TD.select-Cell-Average-NotZero-LEVEL{
+	WIDTH: 163px;
+	MAX-WIDTH: 164px;
+	MIN-WIDTH: 163px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR: #bcbcbc;
+	PADDING: 2px 0px 2px 0px;
+	BACKGROUND-COLOR: #FFFF99;
+	WORD-BREAK: break-all;
+	TEXT-ALIGN:center;
+	WORD-WRAP: break-word;
+}
+
+/*--平均(セレクタ 問題数0件)--*/
+TFOOT * TD.select-Cell-Average-Zero{
+	WIDTH: 96px;
+	MAX-WIDTH: 96px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	PADDING: 2px 0px 2px 0px;
+	BACKGROUND-COLOR: #FFFFFF;
+	TEXT-ALIGN:center;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--平均(セレクタ 指摘無)--*/
+TFOOT * TD.select-Cell-Average-AllZero{
+	WIDTH: 490px;
+	MAX-WIDTH: 490px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	PADDING: 2px 0px 2px 0px;
+	BACKGROUND-COLOR: #FFFFFF;
+	TEXT-ALIGN:center;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--平均(セレクタ 問題数0 達成等級)--*/
+TFOOT * TD.select-Cell-Average-Zero-LEVEL{
+	WIDTH: 163px;
+	MAX-WIDTH: 164px;
+	MIN-WIDTH: 163px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR: #bcbcbc;
+	PADDING: 2px 0px 2px 0px;
+	BACKGROUND-COLOR: #FFFFFF;
+	WORD-BREAK: break-all;
+	TEXT-ALIGN:center;
+	WORD-WRAP: break-word;
+}
+
+
+/*--統計情報--*/
+#container-Box DIV.FG-Box{
+    CLEAR: both;
+	MARGIN-BOTTOM: 20px;
+}
+
+/*--統計情報(達成基準)--*/
+TABLE.figure-Table-criteria{
+	FLOAT: left;
+	WIDTH: 950px;
+	MAX-WIDTH: 950px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR: #bcbcbc;
+	TEXT-ALIGN: center;
+	BORDER-COLLAPSE: collapse;
+	MARGIN: 0px 0px 20px 0px;
+}
+
+/*--達成基準見出し(統計情報)--*/
+.figure-Table-criteria TH{
+	WIDTH: 950px;
+	MAX-WIDTH: 950px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	BORDER-COLLAPSE: collapse;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+
+/*--達成基準セル(統計情報)--*/
+.figure-Table-criteria TR TD{
+	WIDTH:95px;
+	MAX-WIDTH: 95px;
+	BORDER-STYLE: solid;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*--統計情報(要素)--*/
+TABLE.figure-Table-Tag{
+	FLOAT: left;
+	WIDTH: 950px;
+	MAX-WIDTH: 950px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLLAPSE: collapse;
+	BORDER-COLOR: #bcbcbc;
+	TEXT-ALIGN: center;
+	MARGIN: 10px 0px 20px 0px;
+}
+
+/*--要素見出し(統計情報)--*/
+.figure-Table-Tag TH{
+	WIDTH: 950px;
+	MAX-WIDTH: 950px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+
+/*--要素セル(統計情報)--*/
+.figure-Table-Tag TR TD{
+	WIDTH:95px;
+	MAX-WIDTH: 95px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR:#bcbcbc;
+	PADDING: 2px 0px 2px 0px;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+/*----チェックしたファイルの一覧--*/
+#container-Box DIV.CF-Box{
+	CLEAR: both;
+    MARGIN-BOTTOM: 10px;
+	PADDING: 10px 0px 5px 0px;
+}
+
+/*--問題の多かったページ(上位5位)--*/
+TABLE.problem-Page-Lanking{
+	FLOAT: left;
+	WIDTH: 480px;
+	MAX-WIDTH: 480px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR: #bcbcbc;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+	BORDER-COLLAPSE: collapse;
+	MARGIN: 10px 0px 20px 0px;
+}
+
+TH.problemContent-Lank{
+	WIDTH: 480px;
+	MAX-WIDTH: 480px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR: #bcbcbc;
+	PADDING: 2px 0px 2px 0px;
+	BACKGROUND-COLOR: #f2f2f2;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+TH.problem-Sum{
+	WIDTH: 65px;
+	MAX-WIDTH: 65px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	BORDER-COLOR: #bcbcbc;
+	PADDING: 2px 0px 2px 0px;
+	BACKGROUND-COLOR: #f2f2f2;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+}
+
+TD.sum-Cells{
+	WIDTH: 65px;
+	MAX-WIDTH: 65px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR: #bcbcbc;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+	TEXT-ALIGN: center;
+}
+
+TD.problem-Sort{
+	WIDTH: 65px;
+	MAX-WIDTH: 65px;
+	BORDER-STYLE: solid;
+	BORDER-WIDTH: 1px;
+	PADDING: 2px 0px 2px 0px;
+	BORDER-COLOR: #bcbcbc;
+	WORD-BREAK: break-all;
+	WORD-WRAP: break-word;
+	TEXT-ALIGN: center;
+}
+
+/*--チェックした項目--*/
+#container-Box DIV.CL-Box{
+	PADDING-BOTTOM: 10px;
+	MARGIN:10px 0px 0px 0px;
+	CLEAR : both;
+}
+TABLE.CL-Tbl{
+	BORDER: 1px;
+	BORDER-TOP: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+	WIDTH: 950px;
+}
+
+.CL-Tbl TH{
+	HEIGHT: 21px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-COLOR: #bcbcbc;
+	BORDER-STYLE: solid;
+	BACKGROUND-COLOR: #f2f2f2;
+}
+.CL-Tbl TH.TblLef{
+	HEIGHT: 31px;
+	WIDTH: 73px;
+}
+.CL-Tbl TH.TblCen{
+	WIDTH: 101px;
+}
+.CL-Tbl TH.TblCout{
+	WIDTH: 100px;
+}
+
+.CL-Tbl TR.CF-Err{
+	BACKGROUND-COLOR: #FFFF99;
+}
+.CL-Tbl TD{
+	HEIGHT: 31px;
+	BORDER: 0px;
+	BORDER-TOP: 1px;
+	BORDER-RIGHT: 1px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #bcbcbc;
+	FONT-SIZE:120%;
+	FONT-WEIGHT: lighter;
+	VERTICAL-ALIGN: middle;
+	TEXT-ALIGN: center;
+}
+.CL-Tbl TD.TblRig{
+	PADDING: 0px 5px 0px 5px;
+	TEXT-ALIGN: left;
+	FONT-SIZE:100%;
+}
+
+.CL-Tbl TD.ErrorCell{
+    BACKGROUND-COLOR: #FFFF99;
+}
+
+/*--カーソル--*/
+TD.Cursor{
+    CURSOR: POINTER;
+}
+
+/*--NOSCRIPTデザイン--*/
+.noscript{
+	FONT-SIZE:1.2EM;
+	COLOR: #FF0000;
+	FONT-WEIGHT: BOLD;
+}
+
+.noscript TD{
+	VERTICAL-ALIGN:TOP;
+}
+
+DIV.nottingList{
+    FONT-SIZE:1.3em;
+    PADDING-LEFT:46px
+}

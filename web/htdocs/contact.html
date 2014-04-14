@@ -4,7 +4,8 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="ja"><![endif]-->
 <!--[if gte IE 9 ]> <html class="ie" lang="ja"><![endif]-->
 <!--[if !(IE)]><!-->
-<html lang="ja"><!-- InstanceBegin template="/Templates/master.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="ja">
+<!-- InstanceBegin template="/Templates/master.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 <meta charset="UTF-8">
@@ -39,12 +40,14 @@
 <!-- InstanceEndEditable -->
 <!-- InstanceParam name="ciTopH1" type="boolean" value="false" -->
 <!-- InstanceParam name="ciLowH1" type="boolean" value="true" -->
-<!-- InstanceParam name="bodyClass" type="text" value="low" --></head>
+<!-- InstanceParam name="bodyClass" type="text" value="low" -->
+</head>
 <body class="low">
 <p class="blockskip"><a href="#contents-start">Skip to CONTENTS</a></p>
 <div class="l-header-outer">
-	<header class="l-header"><p class="top-logo cilogo"><a href="./"><img src="img/h1-logo.png" alt="BisLite" width="148" height="38"></a></p>
-	<p class="menubtn"><a href="#"><img src="img/item-icon12.png" alt="メニューボタン" width="30" height="30"></a></p>
+	<header class="l-header">
+		<p class="top-logo cilogo"><a href="./"><img src="img/h1-logo.png" alt="BisLite" width="148" height="38"></a></p>
+		<p class="menubtn"><a href="#"><img src="img/item-icon12.png" alt="メニューボタン" width="30" height="30"></a></p>
 		<nav class="l-gnav">
 			<h2 class="visuallyhidden">global navigation</h2>
 			<ul class="gnav">
@@ -75,29 +78,21 @@
 			<h2 class="visuallyhidden">Contact Form</h2>
 			<form class="contactform">
 				<dl>
-					<dt class="contactform-title">
-						<label for="name">Name</label>
-					</dt>
+					<dt class="contactform-title">Name</dt>
 					<dd class="contactform-input">
-						<input id="name" name="Name" type="text">
+						<input name="Name" type="text" title="name" value="ex. John Doe">
 					</dd>
-					<dt class="contactform-title">
-						<label for="email">Email Address</label>
-					</dt>
+					<dt class="contactform-title">Email Address</dt>
 					<dd class="contactform-input">
-						<input id="email" name="Email" type="email">
+						<input name="Email" type="email" title="email">
 					</dd>
-					<dt class="contactform-title">
-						<label for="subject">Subject</label>
-					</dt>
+					<dt class="contactform-title">Subject</dt>
 					<dd class="contactform-input">
-						<input id="subject" name="Subject" type="text">
+						<input name="Subject" type="text" title="subject" value="ex. About Web site">
 					</dd>
-					<dt class="contactform-title">
-						<label for="description">Description</label>
-					</dt>
+					<dt class="contactform-title">Description</dt>
 					<dd class="contactform-input">
-						<textarea id="description" name="Description"></textarea>
+						<textarea name="Description" title="description">Detail here.</textarea>
 					</dd>
 				</dl>
 				<p class="contactform-submit">
@@ -180,12 +175,13 @@
 	<p class="l-footer-copyright"><small>&copy; BisLite Inc. All rights reserved. Some free icons used here are created by Brankic1979.com.<br>
 		Client Logos are copyright and trademark of the respective owners / companies. </small> <span class="l-footer-copyright-logo cilogo"><a href="#"><img src="img/h1-logo.png" alt="BisLite" width="148" height="38"></a></span></p>
 	<!-- / .l-footer-outer --></div>
-<!-- InstanceBeginEditable name="js" -->
+<!-- InstanceBeginEditable name="js" --> 
 <script src="js/jquery-1.8.3.min.js"></script> 
 <script src="js/hoverIntent.js"></script> 
 <script src="js/superfish.min.js"></script> 
 <script src="js/style.js"></script> 
-<script src="js/blockskip.js"></script>
+<script src="js/blockskip.js"></script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
