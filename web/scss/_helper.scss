@@ -119,7 +119,9 @@
 .l-footer,
 .footer-item-v5,
 .l-footer-copyright,
-.low .l-contents {
+.low .l-contents,
+.category ul,
+.isotope {
 	&:before, &:after {
 		content: " "; /* 1 */
 		display: table; /* 2 */

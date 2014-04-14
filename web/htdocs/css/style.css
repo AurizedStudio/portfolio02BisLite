@@ -691,6 +691,10 @@ textarea {
   background-image: url(../img/item-icon13.png);
 }
 
+.pagetitle-v2 {
+  background-image: url(../img/item-icon14.png);
+}
+
 .contactform .contactform-title {
   margin: 0 0 .5em 0;
 }
@@ -726,6 +730,7 @@ textarea {
     padding: 2%;
   }
 }
+/* アクセス地図 */
 .map {
   margin: 0 0 40px 0;
 }
@@ -739,8 +744,90 @@ textarea {
     height: 200px;
   }
 }
+/* オフィスアドレス */
 .officeadd dt {
   font-weight: bold;
+}
+
+/* ポートフォリオカテゴリー */
+.category {
+  margin: 0 0 30px 0;
+  border-bottom: 1px #dfe1e5 solid;
+}
+.category ul {
+  margin: 20px 0;
+}
+.category li {
+  float: left;
+  padding: 1em 2em;
+}
+.category li:hover {
+  background-color: #81e4ed;
+  cursor: pointer;
+}
+.category li.is-category {
+  background-color: #81e4ed;
+}
+
+.isotope {
+  padding: 0 0 40px 0;
+  border-bottom: 1px #dfe1e5 solid;
+}
+.isotope .isotope-item {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 25%;
+  padding: 1%;
+}
+.isotope .isotope-item a {
+  display: block;
+}
+.isotope .isotope-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 999px) {
+  .isotope .isotope-item {
+    width: 33.33333%;
+  }
+}
+@media (max-width: 320px) {
+  .isotope .isotope-item {
+    width: 50%;
+  }
+}
+/* ポートフォリオカテゴリーページネーション */
+.pagenation {
+  text-align: center;
+}
+.pagenation li {
+  display: inline-block;
+}
+.pagenation li.is-page a {
+  background-color: #81e4ed;
+}
+.pagenation li.pagenation-last a, .pagenation li.pagenation-next a {
+  color: #2aacc8;
+  background-color: #e8ebf1;
+}
+.pagenation li.pagenation-last a:hover, .pagenation li.pagenation-next a:hover {
+  color: #e8ebf1;
+  background-color: #2aacc8;
+}
+.pagenation li.pagenation-last {
+  margin: 0 1em 0 0;
+}
+.pagenation a {
+  display: block;
+  width: 2em;
+  padding: .5em 0;
+  color: #000;
+}
+.pagenation a:hover {
+  background-color: #81e4ed;
 }
 
 /**
@@ -959,7 +1046,11 @@ textarea {
 .l-footer-copyright:before,
 .l-footer-copyright:after,
 .low .l-contents:before,
-.low .l-contents:after {
+.low .l-contents:after,
+.category ul:before,
+.category ul:after,
+.isotope:before,
+.isotope:after {
   content: " ";
   /* 1 */
   display: table;
@@ -974,7 +1065,9 @@ textarea {
 .l-footer:after,
 .footer-item-v5:after,
 .l-footer-copyright:after,
-.low .l-contents:after {
+.low .l-contents:after,
+.category ul:after,
+.isotope:after {
   clear: both;
 }
 .ie6 .clearfix, .ie7 .clearfix, .ie6
@@ -995,7 +1088,11 @@ textarea {
 .l-footer-copyright, .ie7
 .l-footer-copyright, .ie6
 .low .l-contents, .ie7
-.low .l-contents {
+.low .l-contents, .ie6
+.category ul, .ie7
+.category ul, .ie6
+.isotope, .ie7
+.isotope {
   /* For IE 6/7 only Include this rule to trigger hasLayout and contain floats. */
   zoom: 1;
 }
