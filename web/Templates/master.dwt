@@ -61,7 +61,7 @@
 						<li><a href="#">Social Media Management</a></li>
 					</ul>
 				</li>
-				<li><a href="#">PORTFOLIO</a></li>
+				<li><a href="../htdocs/portfolio.html">PORTFOLIO</a></li>
 				<li><a href="#">BLOG</a></li>
 				<li><a href="../htdocs/contact.html">CONTACT US</a></li>
 			</ul>
@@ -211,6 +211,7 @@
 	<p class="l-footer-copyright"><small>&copy; BisLite Inc. All rights reserved. Some free icons used here are created by Brankic1979.com.<br>
 		Client Logos are copyright and trademark of the respective owners / companies. </small> <span class="l-footer-copyright-logo cilogo"><a href="#"><img src="../htdocs/img/h1-logo.png" alt="BisLite" width="148" height="38"></a></span></p>
 	<!-- / .l-footer-outer --></div>
+<!-- TemplateBeginEditable name="js" -->
 <script src="../htdocs/js/jquery-1.8.3.min.js"></script> 
 <script src="../htdocs/js/hoverIntent.js"></script> 
 <script src="../htdocs/js/superfish.min.js"></script> 
@@ -219,5 +220,6 @@
 <script src="../htdocs/js/style.js"></script> 
 <script src="../htdocs/js/fixHeight.js"></script> 
 <script src="../htdocs/js/blockskip.js"></script>
+<!-- TemplateEndEditable -->
 </body>
 </html>
