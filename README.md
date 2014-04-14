@@ -1,12 +1,14 @@
 # Coding portfolio02
 
-This is RWD pages. (TOP page + CONTACT US page)  
-I'll add 1 more page.
+This is RWD pages.  
+[TOP](http://aurized-studio.jp/portfolio/BisLite/)  
+[PORTFOLIO](http://aurized-studio.jp/portfolio/BisLite/portfolio.html)  
+[CONTACT](http://aurized-studio.jp/portfolio/BisLite/contact.html)
 
 ## Design
 
-This page is designed by <a href="http://www.graphicsfuel.com/">GraficsFuel</a>.  
-Source PSD's are from <a href="http://www.graphicsfuel.com/2012/12/business-website-psd-templates/">BisLite: Business Website PSD Templates</a>
+This page is designed by [GraficsFuel](http://www.graphicsfuel.com/).  
+Source PSD's are from [BisLite: Business Website PSD Templates](http://www.graphicsfuel.com/2012/12/business-website-psd-templates/)
 
 ## Coding
 
