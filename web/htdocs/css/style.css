@@ -749,7 +749,7 @@ textarea {
   font-weight: bold;
 }
 
-/* ポートフォリオカテゴリー */
+/* ポートフォリオ カテゴリー */
 .category {
   margin: 0 0 30px 0;
   border-bottom: 1px #dfe1e5 solid;
@@ -769,6 +769,21 @@ textarea {
   background-color: #81e4ed;
 }
 
+@media (max-width: 750px) {
+  .category li {
+    width: 6em;
+    padding: 1em .8em;
+    text-align: center;
+  }
+}
+@media (max-width: 320px) {
+  .category li {
+    box-sizing: border-box;
+    width: 48%;
+    padding: 1em 1%;
+  }
+}
+/* ポートフォリオ 各事例 */
 .isotope {
   padding: 0 0 40px 0;
   border-bottom: 1px #dfe1e5 solid;

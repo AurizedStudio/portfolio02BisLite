@@ -364,7 +364,7 @@
 		font-weight: bold;
 	}
 }
-/* ポートフォリオカテゴリー */
+/* ポートフォリオ カテゴリー */
 .category {
 	margin: 0 0 30px 0;
 	border-bottom: 1px #dfe1e5 solid;
@@ -383,6 +383,25 @@
 		}
 	}
 }
+@media ( max-width: $break-midiumsmall ) {
+.category {
+	li {
+		width: 6em;
+		padding: 1em .8em;
+		text-align: center;
+	}
+}
+}
+@media ( max-width: $break-small ) {
+.category {
+	li {
+		box-sizing: border-box;
+		width: 50% - 2%;
+		padding: 1em 1%;
+	}
+}
+}
+/* ポートフォリオ 各事例 */
 .isotope {
 	padding: 0 0 40px 0;
 	border-bottom: 1px #dfe1e5 solid;
