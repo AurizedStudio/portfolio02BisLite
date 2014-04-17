@@ -489,14 +489,26 @@ textarea {
     text-align: left;
   }
   .gnav a {
-    padding: 10px 24px 6px 18px;
+    padding: 10px 24px 10px 18px;
+  }
+  .gnav a:hover {
+    border-top: 4px #e8ebf1 solid;
   }
   .gnav li {
     display: block;
     margin: 0;
   }
+  .gnav .gnav-low a {
+    padding: 10px 18px 10px 18px;
+  }
   .gnav .gnav-low ul {
     position: static;
+  }
+  .gnav .gnav-low ul li a {
+    padding: 10px 14px 14px;
+  }
+  .gnav .sfHover a {
+    border-top: 4px #2aacc8 solid;
   }
 }
 /**
@@ -799,6 +811,10 @@ textarea {
 }
 .isotope .isotope-item a {
   display: block;
+}
+.isotope .isotope-item a:hover {
+  opacity: .7;
+  border: 2px #81e4ed solid;
 }
 .isotope .isotope-item img {
   display: block;

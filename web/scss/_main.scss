@@ -91,15 +91,31 @@
 .gnav {
 	text-align: left;
 	a {
-		padding: 10px 24px 6px 18px;
+		padding: 10px 24px 10px 18px;
+		&:hover {
+			border-top: 4px $bgcolor01 solid;
+		}
 	}
 	li {
 		display: block;
 		margin: 0;
 	}
 	.gnav-low {
+		a {
+			padding: 10px 18px 10px 18px;
+		}
 		ul {
 			position: static;
+			li {
+				a {
+					padding: 10px 14px 14px;
+				}
+			}
+		}
+	}
+	.sfHover {
+		a {
+			border-top: 4px #2aacc8 solid;
 		}
 	}
 }
@@ -381,7 +397,7 @@
 			cursor: pointer;
 		}
 		&.is-category {
-			background-color: #81e4ed;
+			background-color: $color04;
 		}
 	}
 }
@@ -415,6 +431,10 @@
 		padding: 1%;
 		a {
 			display: block;
+			&:hover {
+				opacity: .7;
+				border: 2px $color04 solid;
+			}
 		}
 		img {
 			@include img;
