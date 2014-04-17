@@ -414,7 +414,7 @@ textarea {
 }
 .gnav a {
   display: block;
-  padding: 6px 18px 6px 10px;
+  padding: 6px 16px 6px 14px;
   border-top: 4px #e8ebf1 solid;
 }
 .gnav a:link {
@@ -425,6 +425,7 @@ textarea {
 }
 .gnav a:hover {
   color: #2aacc8;
+  border-top: 4px #2aacc8 solid;
 }
 .gnav a:active {
   color: #2aacc8;
@@ -441,6 +442,7 @@ textarea {
   background-image: url(../img/item-icon10.png);
   background-repeat: no-repeat;
   background-position: 94% .9em;
+  padding: 6px 18px 6px 10px;
 }
 .gnav .gnav-low ul {
   position: absolute;

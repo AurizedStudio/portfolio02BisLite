@@ -17,7 +17,7 @@
 	font-weight: bold;
 	a {
 		display: block;
-		padding: 6px 18px 6px 10px;
+		padding: 6px 16px 6px 14px;
 		border-top: 4px $bgcolor01 solid;
 		&:link {
 			color: #000;
@@ -27,6 +27,7 @@
 		}
 		&:hover {
 			color: $color03;
+			border-top: 4px #2aacc8 solid;
 		}
 		&:active {
 			color: $color03;
@@ -43,6 +44,7 @@
 			background-image: url(../img/item-icon10.png);
 			background-repeat: no-repeat;
 			background-position: 94% .9em;
+			padding: 6px 18px 6px 10px;
 		}
 		ul {
 			position: absolute;
